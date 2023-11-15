@@ -1,3 +1,14 @@
+<?php
+session_start();
+ob_start();
+include_once 'conexao.php';
+
+if((!isset($_SESSION['id'])) AND (!isset($_SESSION['nome']))){
+    $_SESSION['msg'] = "<p style='font-size: 25px; color: #ff0000;'>Erro: Necessário fazer login para acessar a página!</p>";
+    header("Location: index.html");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -30,7 +41,7 @@
                 <li><a href="#Catalogo">Catálogo</a></li>
                 <li><a href="#">Sobre nós</a></li>
                 <li><a href="#Contato">Contato</a></li>
-                <li><a href="registro.php">Registrar/</a><a href="loginusuario.php">Login</a></li>
+                <li><a href="sair.php">Sair</a></li>
             </ul>
         </nav>
       </header>
@@ -150,4 +161,4 @@
 
 </body>
 
-</html>
+</html>   
