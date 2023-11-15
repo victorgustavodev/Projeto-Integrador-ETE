@@ -1,0 +1,312 @@
+/* todos elementos  */
+body {
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.light-theme {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.dark-theme {
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+}
+
+/* * {
+    margin: 0;
+    padding: 0;
+    border: 5px;
+
+} */
+
+/* Fontes */
+@font-face {
+    font-family: Benguia;
+    src: url(assets/fonte/BenguiatStd-Book.otf);
+}
+/* ----------------------------------------------
+Menu
+---------------------------------------------- */
+/* Logo Floricultura Teresinha */
+.logo {
+    font-family: Benguia;
+    color:#043f15;
+    text-decoration: none;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+.logo img
+{
+    margin-top: 25px;
+    width: 25vw;
+}
+
+/* Links do menu */
+a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+/* Menu de navegação */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* background: #9CAD23; */
+    height: 8vh;
+    padding: 0px 2vh;  
+    
+}
+
+/* Links de navegação */
+.nav-list {
+    list-style: none;
+    display: flex;
+    color: black;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+/* CARROSEL */
+.carrossel-container {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrosel-slide {
+    display: none;
+}
+
+.carrossel-container img
+{
+    margin-top: 3vw;
+    border-radius: 2vw;    
+    width: 1200px;
+    height: 500px;
+    transition: box-shadow 1s ease-in-out;
+}
+    
+.carrosel-cainter image-hovered {
+        box-shadow: 0 0 10px rgba(255, 3, 3, 0.925);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+/* Rodapé */
+footer {
+    background-image: url(../fotos/fotoa-redimensionadas-para-o-site/madeira\ fundo\ 1.jpg);
+    background-position-y: 50% ;
+    color: #043f15;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+footer h2 a{
+    word-wrap:none ;
+    display: inline-block;
+    font-size: 20px;
+}
+iframe{
+    margin: 3rem auto;
+    border-radius: 10px;
+    width: 45vw;
+}
+a {
+    color: #DF3B66;
+    text-decoration: none;
+}
+address {
+    background-color: rgba(255, 255, 255, 0.1);
+   width: 45vw;
+   margin: auto;
+   
+}
+.redes-sociais {
+    
+    align-items: center;
+    display: flex; 
+    flex-direction: row;
+    gap: 20px;
+}
+.whats{
+    width: 50;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 9999;
+}  
+#logo-wpp-flutuante{
+    width: 3vw;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+#logo-wpp
+{
+    
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* CSS */
+.btn-comprar {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: #d456026c;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.712) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+.brn-comprar:hover,
+.btn-comprar:focus {
+  background-color: #000000;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.btn-comprar:hover {
+  transform: translateY(-2px);
+}
+
+.btn-comprar:hover {
+  background-color: #d45602;
+  box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+  transform: translateY(0);
+}
+
+/* BOTÃO TROCAR TEMA */
+.switch {
+    display: block;
+    margin-left: 2vw;
+    --width-of-switch: 3.5em;
+    /* --height-of-switch: 2em; */
+    --size-of-icon: 1.4em;
+    --slider-offset: 0.3em;
+    position: relative;
+    width: var(--width-of-switch);
+    height: var(--height-of-switch);
+  }
+
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f4f4f5;
+    transition: .4s;
+    border-radius: 30px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: var(--size-of-icon,1.4em);
+    width: var(--size-of-icon,1.4em);
+    border-radius: 20px;
+    left: var(--slider-offset,0.3em);
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(40deg,#ff0080,#ff8c00 70%);
+    ;
+   transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #303136;
+  }
+  
+  input:checked + .slider:before {
+    left: calc(100% - (var(--size-of-icon,1.4em) + var(--slider-offset,0.3em)));
+    background: #303136;
+    box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
+  }
+
+  #produtos
+  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 15vw;
+    padding-right: 15vw;
+
+  }
+
+  #produtos img
+{
+    width: 300px;
+}
+
+
+  .produto
+  {
+    text-align: center;
+    
+  }
+
+  .produto button
+  {
+    margin-top: 3vw;
+    margin-bottom: 5vw;
+  }
