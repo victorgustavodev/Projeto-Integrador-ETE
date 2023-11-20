@@ -1,3106 +1,2347 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="fotos/Rose.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style/main.css" id="theme-stylesheet" />
+    <link rel="stylesheet" href="style/responsivo.css" />
+    <script
+      src="https://kit.fontawesome.com/c8e307d42e.js"
+      crossorigin="anonymous"
+    ></script>
 
-<head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="shortcut icon" href="fotos/Rose.ico" type="image/x-icon">
-<link rel="stylesheet" href="style/main.css" id="theme-stylesheet">
-<link rel="stylesheet" href="style/responsivo.css">
-<link rel="stylesheet" href="https://fontawesome.com/icons/cart-shopping?f=sharp&s=regular&pc=%23000000" integrity="sha384-GLhlTQ8iK+1iS1+IjRwoTXcE5aZRIUdS/8r+T5uViIcZKh" crossorigin="anonymous">
+    <title>Floricultura Teresinha</title>
+  </head>
 
-
-<title>Floricultura Teresinha</title>
-</head>
-
-<body>
-<!-- NAVEGAÇÃO LOGO + LINKS -->
-  <header>
-<!-- MENU MOBILE -->
+  <body>
+    <!-- NAVEGAÇÃO LOGO + LINKS -->
+    <header>
+      <!-- MENU MOBILE -->
       <nav>
-          <div class="mobile-menu">
-              <div class="line1"></div>
-              <div class="line2"></div>
-              <div class="line3"></div>
-          </div>
-          <a class="logo" href="index.html"><img src="fotos/img/logo.png" alt=""></a>
-<!-- LINKS  -->
-          <ul class="nav-list">
-              <li><a href="#Catalogo">Catálogo</a></li>
-              <li><a href="#">Sobre nós</a></li>
-              <li><a href="#">Contato</a></li>
-              <li><a href="registrar.php">Registrar/</a><a href="login.php">Login</a></li>   
-          </ul>
-<!-- CARRINHO -->
-          <a href="#"><img src="fotos/icones/shop.png" alt=""></a>
+        <div class="mobile-menu">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+        <a class="logo" href="index.html"
+          ><img src="fotos/img/logo.png" alt=""
+        /></a>
+        <!-- LINKS  -->
+        <ul class="nav-list">
+          <li><a href="#Catalogo">Catálogo</a></li>
+          <li><a href="#">Sobre nós</a></li>
+          <li><a href="#">Contato</a></li>
+          <li>
+            <a href="registrar.php">Registrar/</a><a href="login.php">Login</a>
+          </li>
+        </ul>
+        <!-- CARRINHO -->
+        <a href="#"><i class="fa-solid fa-cart-shopping" style="color: #000000; font-size: 25px; padding-left: 50px;"></i></a>
       </nav>
-      
     </header>
 
-  <!-- CARROSEL -->
+    <!-- CARROSEL -->
     <div class="carrossel-container">
-      <button id="prevButton" style="margin: 20px;">Left</button>
+      <button
+        id="prevButton"
+        style="
+          margin: 20px;
+          padding: 20px;
+          font-size: 20px;
+          background-color: transparent;
+          border: none;
+          border-radius: 50%;
+        "
+      >
+        <i
+          class="fa-solid fa-chevron-up fa-rotate-270"
+          style="color: #000000"
+        ></i>
+      </button>
       <div class="carrossel-slide" id="slide1">
-          <img src="fotos/carrosel/01.jpg" alt="Image 1">
+        <img src="fotos/carrosel/01.jpg" alt="Image 1" />
       </div>
       <div class="carrossel-slide" id="slide2">
-          <img src="fotos/carrosel/02.jpg" alt="Image 2">
+        <img src="fotos/carrosel/02.jpg" alt="Image 2" />
       </div>
       <div class="carrossel-slide" id="slide3">
-          <img src="fotos/carrosel/03.png" alt="Image 3">
+        <img src="fotos/carrosel/03.png" alt="Image 3" />
       </div>
-      <button id="nextButton" style="margin: 20px;" >Right</button>
-  </div>
-
-<!-- TITULO DOS PRODUTOS -->
-
-  <h1 style="font-size: 20px; text-align: center; margin: 5vw;">PRODUTOS EM DESTAQUE</h1>
-
-  <!-- CATALOGO -->
-  <div class="box-flex">
-    <div class="container">
-      <div class="listagem-produtos">
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="1373256">
-
-      <a href="/produto/1373256/buque-de-gerberas/" title="Buquê de Gérberas">
-        <figure>
-          <img alt="Buquê de Gérberas" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/2347638-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Buquê de Gérberas								</h3>
-    </div>
-    <div>
-      <span class="obs">Um lindo Buque pronto para transmitir os mais lindos sentimentos(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                              <!---<span>por apenas</span>--->
-            
-            R$ 350,00								</div>
-      <a href="/produto/1373256/buque-de-gerberas/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="1340690">
-
-      <a href="/produto/1340690/mix-do-florista/" title="Mix do Florista">
-        <figure>
-          <img alt="Mix do Florista" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/2286482-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Mix do Florista								</h3>
-    </div>
-    <div>
-      <span class="obs">Esse buque é muito especial, pois deixamos a criação dele(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                              <!---<span>por apenas</span>--->
-            
-            R$ 130,00								</div>
-      <a href="/produto/1340690/mix-do-florista/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="1331374">
-
-      <a href="/produto/1331374/sac-a-fleurs-com-mix-de-flores/" title="Sac à Fleurs com Mix de Flores">
-        <figure>
-          <img alt="Sac à Fleurs com Mix de Flores" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/2270459-3.jpg">
-        </figure>
-      </a>
-      <h3>
-        Sac à Fleurs com Mix de Flores								</h3>
-    </div>
-    <div>
-      <span class="obs">Uma delicada bolsa com Mix de Flores pronta para surpreender(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                              <!---<span>por apenas</span>--->
-            
-            R$ 170,00								</div>
-      <a href="/produto/1331374/sac-a-fleurs-com-mix-de-flores/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="1294069">
-
-      <a href="/produto/1294069/bau-com-vinho-e-flores/" title="Baú com Vinho e flores.">
-        <figure>
-          <img alt="Baú com Vinho e flores." loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/2208695-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Baú com Vinho e flores.								</h3>
-    </div>
-    <div>
-      <span class="obs">Baú com Vinho e flores.
-
-Esse presente especial vai composto(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                              <span>de <del> R$ 520,00</del></span>
-            por R$ 490,00																		</div>
-      <a href="/produto/1294069/bau-com-vinho-e-flores/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="1294060">
-
-      <a href="/produto/1294060/bac-wine-papai/" title="Bac Wine papai">
-        <figure>
-          <img alt="Bac Wine papai" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/2208685-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Bac Wine papai								</h3>
-    </div>
-    <div>
-      <span class="obs">Bac wine Papai.
-
-Esse presente é composto por:<br>
-
-- 01(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                              <span>de <del> R$ 290,00</del></span>
-            por R$ 290,00																		</div>
-      <a href="/produto/1294060/bac-wine-papai/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="1294053">
-
-      <a href="/produto/1294053/balde-com-cerveja-e-chocolate/" title="Balde com Cerveja e chocolate.">
-        <figure>
-          <img alt="Balde com Cerveja e chocolate." loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/2208681-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Balde com Cerveja e chocolate.								</h3>
-    </div>
-    <div>
-      <span class="obs">Balde com Cerveja e chocolate.
-
-Verificar disponibilidade(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                              <span>de <del> R$ 160,00</del></span>
-            por R$ 129,90																		</div>
-      <a href="/produto/1294053/balde-com-cerveja-e-chocolate/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-<div class="print-separador"></div>					<div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="1290638">
-
-      <a href="/produto/1290638/mini-cesta-com-cerveja/" title="Mini Cesta com cerveja">
-        <figure>
-          <img alt="Mini Cesta com cerveja" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/2202321-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Mini Cesta com cerveja								</h3>
-    </div>
-    <div>
-      <span class="obs">Mini cesta Com Cerveja<br>
-
-Incluindo:<br>
-
-- 01 mini cactos(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                              <span>de <del> R$ 120,00</del></span>
-            por R$ 99,90																		</div>
-      <a href="/produto/1290638/mini-cesta-com-cerveja/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="1290628">
-
-      <a href="/produto/1290628/balde-qeu-te-amo-paiq/" title="Balde " eu="" te="" amo="" pai""="">
-        <figure>
-          <img alt="Balde " eu="" te="" amo="" pai""="" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/2202287-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Balde "Eu te Amo Pai"								</h3>
-    </div>
-    <div>
-      <span class="obs">Balde"Eu Te amo, Pai!"<br>
-
-Essa Bac Personalizada(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                              <span>de <del> R$ 150,00</del></span>
-            por R$ 150,00																		</div>
-      <a href="/produto/1290628/balde-qeu-te-amo-paiq/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="1211545">
-
-      <a href="/produto/1211545/magnificent-love/" title="Magnificent Love">
-        <figure>
-          <img alt="Magnificent Love" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/2056497-3.jpg">
-        </figure>
-      </a>
-      <h3>
-        Magnificent Love								</h3>
-    </div>
-    <div>
-      <span class="obs">Agrupado de 12 Rosas, transformando em um lindo Coração!
-Podendo(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 280,00																	</div>
-      <a href="/produto/1211545/magnificent-love/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="1211396">
-
-      <a href="/produto/1211396/saved-love/" title="Saved Love">
-        <figure>
-          <img alt="Saved Love" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/2056236-3.jpg">
-        </figure>
-      </a>
-      <h3>
-        Saved Love								</h3>
-    </div>
-    <div>
-      <span class="obs">Uma linda Caixa contendo de 14 a 20 Rosas.
-Perfeita para demonstrar(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 320,00																	</div>
-      <a href="/produto/1211396/saved-love/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="1211391">
-
-      <a href="/produto/1211391/carta-de-amor-ferrero-rocher/" title="Carta de Amor + Ferrero Rocher">
-        <figure>
-          <img alt="Carta de Amor + Ferrero Rocher" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/2056228-3.jpg">
-        </figure>
-      </a>
-      <h3>
-        Carta de Amor + Ferrero Rocher								</h3>
-    </div>
-    <div>
-      <span class="obs">Uma linda Carta de Amor composta com Flores Nobres Selecionadas,(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 280,00																	</div>
-      <a href="/produto/1211391/carta-de-amor-ferrero-rocher/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="1194408">
-
-      <a href="/produto/1194408/orquidea-phalaenopse-branca-02-hastes/" title="Orquídea Phalaenopse Branca 02 hastes">
-        <figure>
-          <img alt="Orquídea Phalaenopse Branca 02 hastes" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/2025783-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Orquídea Phalaenopse Branca 02 hastes								</h3>
-    </div>
-    <div>
-      <span class="obs">Casa florida é sinônimo de alegria.
-E nada melhor do que(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                              <!---<span>por apenas</span>--->
-            
-            R$ 190,00								</div>
-      <a href="/produto/1194408/orquidea-phalaenopse-branca-02-hastes/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="1194405">
-
-      <a href="/produto/1194405/orquidea-frozen-embalagem-especial/" title="Orquídea Frozen embalagem especial.">
-        <figure>
-          <img alt="Orquídea Frozen embalagem especial." loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/2025778-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Orquídea Frozen embalagem especial.								</h3>
-    </div>
-    <div>
-      <span class="obs">Como não se encantar pela linda Orquídea Frozen? <br>
-
-Com(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                              <!---<span>por apenas</span>--->
-            
-            R$ 320,00								</div>
-      <a href="/produto/1194405/orquidea-frozen-embalagem-especial/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="1194403">
-
-      <a href="/produto/1194403/orquidea-cascata-lilas-em-cachepo-madeira/" title="Orquídea Cascata Lilás em cachepô Madeira">
-        <figure>
-          <img alt="Orquídea Cascata Lilás em cachepô Madeira" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/2025777-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Orquídea Cascata Lilás em cachepô Madeira								</h3>
-    </div>
-    <div>
-      <span class="obs">Orquídea Cascata Roxa<br>
-
-Orquídea Cascata Roxa Phalaenopsis,(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                              <!---<span>por apenas</span>--->
-            
-            R$ 280,00								</div>
-      <a href="/produto/1194403/orquidea-cascata-lilas-em-cachepo-madeira/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="1194402">
-
-      <a href="/produto/1194402/orquidea-cascata-branca-em-cachepo-madeira-com-margarida/" title="Orquídea Cascata branca em cachepô Madeira com margarida">
-        <figure>
-          <img alt="Orquídea Cascata branca em cachepô Madeira com margarida" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/2025776-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Orquídea Cascata branca em cachepô Madeira com margarida								</h3>
-    </div>
-    <div>
-      <span class="obs"></span>
-    </div>
-    <div>
-      <div class="valor">
-                              <!---<span>por apenas</span>--->
-            
-            R$ 310,00								</div>
-      <a href="/produto/1194402/orquidea-cascata-branca-em-cachepo-madeira-com-margarida/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-<div class="print-separador"></div>					<div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="1024171">
-
-      <a href="/produto/1024171/quiet-love/" title="Quiet Love">
-        <figure>
-          <img alt="Quiet Love" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/1732582-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Quiet Love								</h3>
-    </div>
-    <div>
-      <span class="obs">O copo-de-leite representa a pureza e a inocência, associando-se(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 320,00																	</div>
-      <a href="/produto/1024171/quiet-love/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="1013989">
-
-      <a href="/produto/1013989/passion-amour/" title="Passion  Amour">
-        <figure>
-          <img alt="Passion  Amour" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/1714056-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Passion  Amour								</h3>
-    </div>
-    <div>
-      <span class="obs">Esse é nosso presente mais Luxuoso.<br>
-
-Composto por Rosas(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 550,00																	</div>
-      <a href="/produto/1013989/passion-amour/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="964494">
-
-      <a href="/produto/964494/petit-charme/" title="Petit Charme">
-        <figure>
-          <img alt="Petit Charme" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/1624606-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Petit Charme								</h3>
-    </div>
-    <div>
-      <span class="obs">Um Lindo Deitadinho de Mix de Flores.
-Uma lembrança Perfeita(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 80,00																	</div>
-      <a href="/produto/964494/petit-charme/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="936272">
-
-      <a href="/produto/936272/agrupado-de-luxo/" title="Agrupado de Luxo">
-        <figure>
-          <img alt="Agrupado de Luxo" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/1573053-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Agrupado de Luxo								</h3>
-    </div>
-    <div>
-      <span class="obs">As Rosas Representa o amor e suas nuances.<br>
-
-Para cada(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 280,00																	</div>
-      <a href="/produto/936272/agrupado-de-luxo/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="933116">
-
-      <a href="/produto/933116/mix-do-florista/" title="Mix do Florista">
-        <figure>
-          <img alt="Mix do Florista" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/1567565-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Mix do Florista								</h3>
-    </div>
-    <div>
-      <span class="obs">Esse buque é muito especial, pois deixamos a criação dele(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 340,00																	</div>
-      <a href="/produto/933116/mix-do-florista/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="931825">
-
-      <a href="/produto/931825/carta-de-amor-bobbles-personalizada/" title="Carta de Amor + Bobbles Personalizada">
-        <figure>
-          <img alt="Carta de Amor + Bobbles Personalizada" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/1565175-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Carta de Amor + Bobbles Personalizada								</h3>
-    </div>
-    <div>
-      <span class="obs">Essa é uma ótima sugestão para você que quer complementar(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 290,00																	</div>
-      <a href="/produto/931825/carta-de-amor-bobbles-personalizada/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="914834">
-
-      <a href="/produto/914834/cesta-happy-birthday/" title="Cesta Happy Birthday">
-        <figure>
-          <img alt="Cesta Happy Birthday" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/1535837-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Cesta Happy Birthday								</h3>
-    </div>
-    <div>
-      <span class="obs"> <br>
-
-Um belíssimo Baú contendo Pães (sal e Doce), Pão(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 680,00																	</div>
-      <a href="/produto/914834/cesta-happy-birthday/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="834849">
-
-      <a href="/produto/834849/doce-monamour/" title="Doce Monamour">
-        <figure>
-          <img alt="Doce Monamour" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/1399502-3.jpg">
-        </figure>
-      </a>
-      <h3>
-        Doce Monamour								</h3>
-    </div>
-    <div>
-      <span class="obs">
-Agrupado com 12 rosas vermelhas e ruscus com laço e 8 bombons(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 250,00																	</div>
-      <a href="/produto/834849/doce-monamour/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="834556">
-
-      <a href="/produto/834556/buque-apaixonado/" title="Buque Apaixonado">
-        <figure>
-          <img alt="Buque Apaixonado" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/1398968-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Buque Apaixonado								</h3>
-    </div>
-    <div>
-      <span class="obs">Buque Apaixonado<br>
-
-Maravilhoso Buque com 100 Rosas vermelhas(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 1.830,00																	</div>
-      <a href="/produto/834556/buque-apaixonado/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-<div class="print-separador"></div>					<div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="748823">
-
-      <a href="/produto/748823/carta-de-amor-ferrero-rocher/" title="Carta de Amor + Ferrero Rocher">
-        <figure>
-          <img alt="Carta de Amor + Ferrero Rocher" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/1251658-3.jpg">
-        </figure>
-      </a>
-      <h3>
-        Carta de Amor + Ferrero Rocher								</h3>
-    </div>
-    <div>
-      <span class="obs">Uma linda Carta de Amor composta com Flores Nobres Selecionadas,(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 280,00																	</div>
-      <a href="/produto/748823/carta-de-amor-ferrero-rocher/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="747995">
-
-      <a href="/produto/747995/buque-de-noiva-passion/" title="Buque de Noiva Passion">
-        <figure>
-          <img alt="Buque de Noiva Passion" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/1250093-3.jpg">
-        </figure>
-      </a>
-      <h3>
-        Buque de Noiva Passion								</h3>
-    </div>
-    <div>
-      <span class="obs">Buque de noiva composto por 18 rosas, ruscus e acabamento no(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 180,00																	</div>
-      <a href="/produto/747995/buque-de-noiva-passion/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="732415">
-
-      <a href="/produto/732415/buque-belle-fleur/" title="Buque Belle fleur">
-        <figure>
-          <img alt="Buque Belle fleur" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/1221747-3.jpg">
-        </figure>
-      </a>
-      <h3>
-        Buque Belle fleur								</h3>
-    </div>
-    <div>
-      <span class="obs">Um Buque inspirado em Lindas Mulheres
-Cheio de beleza e significados!
-Compõe-se(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 450,00																	</div>
-      <a href="/produto/732415/buque-belle-fleur/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="693580">
-
-      <a href="/produto/693580/buque-love-it/" title="Buque Love It">
-        <figure>
-          <img alt="Buque Love It" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/1152537-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Buque Love It								</h3>
-    </div>
-    <div>
-      <span class="obs">Aproximadamente 45 a 50 Rosas,
-prontas para cumprir o seu papel:(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 700,00																	</div>
-      <a href="/produto/693580/buque-love-it/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="670206">
-
-      <a href="/produto/670206/buque-amour-supreme/" title="Buque Amour Suprême">
-        <figure>
-          <img alt="Buque Amour Suprême" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/1110371-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Buque Amour Suprême								</h3>
-    </div>
-    <div>
-      <span class="obs">Como é o Amor Supreme pra você?
-Nós usamos as Flores para(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 290,00																	</div>
-      <a href="/produto/670206/buque-amour-supreme/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="670185">
-
-      <a href="/produto/670185/buque-luxo/" title="Buque Luxo">
-        <figure>
-          <img alt="Buque Luxo" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/1110344-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Buque Luxo								</h3>
-    </div>
-    <div>
-      <span class="obs">Um lindo e elegante buque, composto por Astromélias, Tango(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 550,00																	</div>
-      <a href="/produto/670185/buque-luxo/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="670167">
-
-      <a href="/produto/670167/ramalhete-de-girassois/" title="Ramalhete de Girassóis">
-        <figure>
-          <img alt="Ramalhete de Girassóis" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/1110314-3.jpg">
-        </figure>
-      </a>
-      <h3>
-        Ramalhete de Girassóis								</h3>
-    </div>
-    <div>
-      <span class="obs">Volte-se para o que te faz bem!
-🌻 Contagie o mundo com sua(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 180,00																	</div>
-      <a href="/produto/670167/ramalhete-de-girassois/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="640475">
-
-      <a href="/produto/640475/bac-wine-chocolate/" title="Bac Wine Chocolate">
-        <figure>
-          <img alt="Bac Wine Chocolate" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/1060107-3.jpg">
-        </figure>
-      </a>
-      <h3>
-        Bac Wine Chocolate								</h3>
-    </div>
-    <div>
-      <span class="obs">Toda conquista merece ser celebrada!
-
-Juntamos nesse presente(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 330,00																	</div>
-      <a href="/produto/640475/bac-wine-chocolate/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="590397">
-
-      <a href="/produto/590397/coroa-funebre-topazio-azul/" title="Coroa Fúnebre Topázio Azul">
-        <figure>
-          <img alt="Coroa Fúnebre Topázio Azul" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/974203-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Coroa Fúnebre Topázio Azul								</h3>
-    </div>
-    <div>
-      <span class="obs">Coroa Fúnebre composta por flores selecionadas : Hortênsias,(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 1.600,00																	</div>
-      <a href="/produto/590397/coroa-funebre-topazio-azul/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-<div class="print-separador"></div>					<div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="586577">
-
-      <a href="/produto/586577/sac-a-fleurs-com-rosas-brancas/" title="Sac a Fleurs com Rosas brancas">
-        <figure>
-          <img alt="Sac a Fleurs com Rosas brancas" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/967353-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Sac a Fleurs com Rosas brancas								</h3>
-    </div>
-    <div>
-      <span class="obs">Sac à Fleurs com Rosas Brancas<br>
-
-Uma delicada bolsa de(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 149,90																	</div>
-      <a href="/produto/586577/sac-a-fleurs-com-rosas-brancas/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="544270">
-
-      <a href="/produto/544270/orquidea-branca/" title="Orquídea Branca">
-        <figure>
-          <img alt="Orquídea Branca" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/892667-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Orquídea Branca								</h3>
-    </div>
-    <div>
-      <span class="obs">Casa florida é sinônimo de alegria.
-E nada melhor do que(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 220,00																	</div>
-      <a href="/produto/544270/orquidea-branca/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="544251">
-
-      <a href="/produto/544251/orquidea-frozen/" title="Orquídea Frozen">
-        <figure>
-          <img alt="Orquídea Frozen" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/892624-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Orquídea Frozen								</h3>
-    </div>
-    <div>
-      <span class="obs">Como não se encantar pela linda Orquídea Frozen? <br>
-
-Com(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 250,00																	</div>
-      <a href="/produto/544251/orquidea-frozen/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="544231">
-
-      <a href="/produto/544231/orquidea-cascata-amarela/" title="Orquídea Cascata Amarela">
-        <figure>
-          <img alt="Orquídea Cascata Amarela" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/892578-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Orquídea Cascata Amarela								</h3>
-    </div>
-    <div>
-      <span class="obs">Orquídea Cascata Amarela Phalaenopsis pote 12 já embalada(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 230,00																	</div>
-      <a href="/produto/544231/orquidea-cascata-amarela/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="542408">
-
-      <a href="/produto/542408/50-tons-de-rosa/" title="50 Tons de Rosa">
-        <figure>
-          <img alt="50 Tons de Rosa" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/889355-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        50 Tons de Rosa								</h3>
-    </div>
-    <div>
-      <span class="obs">Esse é o resultado quando juntamos varias espécies de flores(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 350,00																	</div>
-      <a href="/produto/542408/50-tons-de-rosa/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="533345">
-
-      <a href="/produto/533345/buque-de-noiva-qserenaq/" title="Buquê de noiva " serena""="">
-        <figure>
-          <img alt="Buquê de noiva " serena""="" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/874649-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Buquê de noiva "Serena"								</h3>
-    </div>
-    <div>
-      <span class="obs">E por falar em Girassóis ele está entre a preferência das(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 180,00																	</div>
-      <a href="/produto/533345/buque-de-noiva-qserenaq/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="533301">
-
-      <a href="/produto/533301/buque-de-noiva-qperolaq/" title="Buquê de noiva " pérola""="">
-        <figure>
-          <img alt="Buquê de noiva " pérola""="" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/874608-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Buquê de noiva "Pérola"								</h3>
-    </div>
-    <div>
-      <span class="obs">O nosso "Buque Pérola" é de arrancar sorrisos com(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 250,00																	</div>
-      <a href="/produto/533301/buque-de-noiva-qperolaq/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="532590">
-
-      <a href="/produto/532590/buque-mix-de-flores-desconstruido/" title="Buque Mix de Flores Desconstruído ">
-        <figure>
-          <img alt="Buque Mix de Flores Desconstruído " loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/873275-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Buque Mix de Flores Desconstruído 								</h3>
-    </div>
-    <div>
-      <span class="obs">Um Buque Especial, Elegante e Cheio de Vida para o grande dia!<br>
-
-Esse(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 480,00																	</div>
-      <a href="/produto/532590/buque-mix-de-flores-desconstruido/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="531619">
-
-      <a href="/produto/531619/agrupado-mon-amour/" title="Agrupado Mon Amour">
-        <figure>
-          <img alt="Agrupado Mon Amour" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/871723-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Agrupado Mon Amour								</h3>
-    </div>
-    <div>
-      <span class="obs"> <br>Agrupado com 12 rosas vermelhas e ruscus com laço.<br>(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 150,00																	</div>
-      <a href="/produto/531619/agrupado-mon-amour/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-<div class="print-separador"></div>					<div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="511766">
-
-      <a href="/produto/511766/agrupado-qprimaveraq/" title="Agrupado " primavera""="">
-        <figure>
-          <img alt="Agrupado " primavera""="" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/838997-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Agrupado "Primavera"								</h3>
-    </div>
-    <div>
-      <span class="obs">Dê boas-vindas à Primavera florindo a sua casa, escritório,(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 140,00																	</div>
-      <a href="/produto/511766/agrupado-qprimaveraq/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="503995">
-
-      <a href="/produto/503995/combo-qapaixonadoq/" title="Combo " apaixonado""="">
-        <figure>
-          <img alt="Combo " apaixonado""="" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/825464-3.jpg">
-        </figure>
-      </a>
-      <h3>
-        Combo "Apaixonado"								</h3>
-    </div>
-    <div>
-      <span class="obs">Um lindo "Casadinho"
-Esse combo é um Mix de Ramalhete(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 160,00																	</div>
-      <a href="/produto/503995/combo-qapaixonadoq/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="349240">
-
-      <a href="/produto/349240/bac-a-fleurs-girassois-bobbles-personalizada/" title="Bac à Fleurs Girassóis + Bobbles Personalizada">
-        <figure>
-          <img alt="Bac à Fleurs Girassóis + Bobbles Personalizada" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/558950-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Bac à Fleurs Girassóis + Bobbles Personalizada								</h3>
-    </div>
-    <div>
-      <span class="obs">
-Essa é nossa “Bac a Fleurs”.
-Uma delicada box(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 330,00																	</div>
-      <a href="/produto/349240/bac-a-fleurs-girassois-bobbles-personalizada/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="455268">
-
-      <a href="/produto/455268/cesta-de-frutas-com-chocolate-e-pelucia/" title="Cesta de Frutas com Chocolate e Pelúcia">
-        <figure>
-          <img alt="Cesta de Frutas com Chocolate e Pelúcia" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/740914-3.png">
-        </figure>
-      </a>
-      <h3>
-        Cesta de Frutas com Chocolate e Pelúcia								</h3>
-    </div>
-    <div>
-      <span class="obs">Deliciosa cesta para ser degustada em qualquer momento do dia,(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 185,00																	</div>
-      <a href="/produto/455268/cesta-de-frutas-com-chocolate-e-pelucia/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="404528">
-
-      <a href="/produto/404528/bac-a-fleurs-com-rosas-lilas/" title="Bac à Fleurs com Rosas Lilás">
-        <figure>
-          <img alt="Bac à Fleurs com Rosas Lilás" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/655192-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Bac à Fleurs com Rosas Lilás								</h3>
-    </div>
-    <div>
-      <span class="obs">Esse é nosso “Bac a Fleurs”.<br>
-
-
-Uma delicada(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 330,00																	</div>
-      <a href="/produto/404528/bac-a-fleurs-com-rosas-lilas/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="334988">
-
-      <a href="/produto/334988/bac-tesouro-vermelha/" title="Bac Tesouro - Vermelha">
-        <figure>
-          <img alt="Bac Tesouro - Vermelha" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/533866-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Bac Tesouro - Vermelha								</h3>
-    </div>
-    <div>
-      <span class="obs">Esse presente é desenvolvido exclusivamente para quem quer(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                              <!---<span>por apenas</span>--->
-            
-            R$ 430,00								</div>
-      <a href="/produto/334988/bac-tesouro-vermelha/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="335991">
-
-      <a href="/produto/335991/mix-do-florista/" title="Mix do Florista">
-        <figure>
-          <img alt="Mix do Florista" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/535392-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Mix do Florista								</h3>
-    </div>
-    <div>
-      <span class="obs">Esse buque é muito especial, pois deixamos a criação dele(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                              <!---<span>por apenas</span>--->
-            
-            R$ 340,00								</div>
-      <a href="/produto/335991/mix-do-florista/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="329165">
-
-      <a href="/produto/329165/cesta-love/" title="Cesta Love">
-        <figure>
-          <img alt="Cesta Love" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/524623-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Cesta Love								</h3>
-    </div>
-    <div>
-      <span class="obs">Uma linda cesta contendo Pães, Torradas, frios, Frutas, Biscoitos(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                              <!---<span>por apenas</span>--->
-            
-            R$ 320,00								</div>
-      <a href="/produto/329165/cesta-love/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="332919">
-
-      <a href="/produto/332919/buque-tradicional-de-13-rosas-vermelhas/" title="Buque Tradicional de 13 rosas Vermelhas">
-        <figure>
-          <img alt="Buque Tradicional de 13 rosas Vermelhas" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/530539-3.jpg">
-        </figure>
-      </a>
-      <h3>
-        Buque Tradicional de 13 rosas Vermelhas								</h3>
-    </div>
-    <div>
-      <span class="obs">Oferecer Rosas vermelhas evidencia a sua admiração por alguém.
-(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 250,00																	</div>
-      <a href="/produto/332919/buque-tradicional-de-13-rosas-vermelhas/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-<div class="print-separador"></div>					<div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="455270">
-
-      <a href="/produto/455270/cesta-sabor-do-amor/" title="Cesta Sabor do Amor">
-        <figure>
-          <img alt="Cesta Sabor do Amor" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/740916-3.png">
-        </figure>
-      </a>
-      <h3>
-        Cesta Sabor do Amor								</h3>
-    </div>
-    <div>
-      <span class="obs">Cesta Magnifica, feita com a melhor combinação possível,(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 290,00																	</div>
-      <a href="/produto/455270/cesta-sabor-do-amor/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="335954">
-
-      <a href="/produto/335954/bac-doce-coracao/" title="Bac Doce Coração">
-        <figure>
-          <img alt="Bac Doce Coração" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/535330-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Bac Doce Coração								</h3>
-    </div>
-    <div>
-      <span class="obs">Esse presente é uma ótima para voce que quer tocar o coração(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 490,00																	</div>
-      <a href="/produto/335954/bac-doce-coracao/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="335971">
-
-      <a href="/produto/335971/ramalhete-auge-cor-branco/" title="Ramalhete Auge - Cor branco.">
-        <figure>
-          <img alt="Ramalhete Auge - Cor branco." loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/535366-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Ramalhete Auge - Cor branco.								</h3>
-    </div>
-    <div>
-      <span class="obs">Ramalhete de flores inspirado em criações Italiana, composto(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                              <!---<span>por apenas</span>--->
-            
-            R$ 280,00								</div>
-      <a href="/produto/335971/ramalhete-auge-cor-branco/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="316003">
-
-      <a href="/produto/316003/cesta-tasty/" title="Cesta Tasty">
-        <figure>
-          <img alt="Cesta Tasty" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/2059920-3.jpg">
-        </figure>
-      </a>
-      <h3>
-        Cesta Tasty								</h3>
-    </div>
-    <div>
-      <span class="obs">Uma linda cesta contendo pães, torrada, frios, frutas, buscoito(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                              <!---<span>por apenas</span>--->
-            
-            R$ 190,00								</div>
-      <a href="/produto/316003/cesta-tasty/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="455271">
-
-      <a href="/produto/455271/cesta-de-chocolates-com-frutas/" title="Cesta de Chocolates com Frutas">
-        <figure>
-          <img alt="Cesta de Chocolates com Frutas" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/740918-3.png">
-        </figure>
-      </a>
-      <h3>
-        Cesta de Chocolates com Frutas								</h3>
-    </div>
-    <div>
-      <span class="obs">Cesta grande com frutas e chocolates para surpreender e demonstrar(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 190,00																	</div>
-      <a href="/produto/455271/cesta-de-chocolates-com-frutas/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="335964">
-
-      <a href="/produto/335964/buque-especial-candy-20-rosas-acabamento/" title="Buque Especial Candy 20 Rosas + acabamento.">
-        <figure>
-          <img alt="Buque Especial Candy 20 Rosas + acabamento." loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/535339-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Buque Especial Candy 20 Rosas + acabamento.								</h3>
-    </div>
-    <div>
-      <span class="obs">Esse é um buque tradicional, que de tradicional não tem nada(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                              <!---<span>por apenas</span>--->
-            
-            R$ 490,00								</div>
-      <a href="/produto/335964/buque-especial-candy-20-rosas-acabamento/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="335987">
-
-      <a href="/produto/335987/cadinho-de-rosas-importadas/" title="Cadinho de Rosas Importadas.">
-        <figure>
-          <img alt="Cadinho de Rosas Importadas." loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/535377-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Cadinho de Rosas Importadas.								</h3>
-    </div>
-    <div>
-      <span class="obs">A Rosa Freedom® é a variedade na cor vermelha mais produzida(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 600,00																	</div>
-      <a href="/produto/335987/cadinho-de-rosas-importadas/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="335961">
-
-      <a href="/produto/335961/agrupado-de-flores-nobres/" title="Agrupado de Flores Nobres">
-        <figure>
-          <img alt="Agrupado de Flores Nobres" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/535336-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Agrupado de Flores Nobres								</h3>
-    </div>
-    <div>
-      <span class="obs"> <br>
-
-Nossos buques têm design único, com cores e texturas(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 950,00																	</div>
-      <a href="/produto/335961/agrupado-de-flores-nobres/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="431016">
-
-      <a href="/produto/431016/cesta-de-cerveja/" title="Cesta de Cerveja">
-        <figure>
-          <img alt="Cesta de Cerveja" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/697596-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Cesta de Cerveja								</h3>
-    </div>
-    <div>
-      <span class="obs">Essa é uma otima opção de presente contendo:<br>
-
-<br>
-
--(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                              <!---<span>por apenas</span>--->
-            
-            R$ 280,00								</div>
-      <a href="/produto/431016/cesta-de-cerveja/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-<div class="print-separador"></div>					<div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="329369">
-
-      <a href="/produto/329369/bac-a-fleurs-com-rosas-azul/" title="Bac à Fleurs com Rosas Azul">
-        <figure>
-          <img alt="Bac à Fleurs com Rosas Azul" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/524885-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Bac à Fleurs com Rosas Azul								</h3>
-    </div>
-    <div>
-      <span class="obs">Esse é nosso “Bac a Fleurs”.
-Uma delicada box(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 255,00																	</div>
-      <a href="/produto/329369/bac-a-fleurs-com-rosas-azul/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="431033">
-
-      <a href="/produto/431033/cesta-de-queijos-e-vinho/" title="Cesta de Queijos e Vinho.">
-        <figure>
-          <img alt="Cesta de Queijos e Vinho." loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/697633-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Cesta de Queijos e Vinho.								</h3>
-    </div>
-    <div>
-      <span class="obs">Cesta em modelo rustico contendo:<br>
-
-01 vinho (verificar(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                              <!---<span>por apenas</span>--->
-            
-            R$ 220,00								</div>
-      <a href="/produto/431033/cesta-de-queijos-e-vinho/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="431049">
-
-      <a href="/produto/431049/bac-a-fleurs-baldinho-com-cervejas-louvada/" title="Bac a Fleurs + Baldinho com cervejas louvada">
-        <figure>
-          <img alt="Bac a Fleurs + Baldinho com cervejas louvada" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/697653-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Bac a Fleurs + Baldinho com cervejas louvada								</h3>
-    </div>
-    <div>
-      <span class="obs">Bac à Fleurs com Rosas Azuis<br>
-
-Esse é nosso “Bac(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 310,00																	</div>
-      <a href="/produto/431049/bac-a-fleurs-baldinho-com-cervejas-louvada/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="431027">
-
-      <a href="/produto/431027/cesta-bless/" title="Cesta Bless">
-        <figure>
-          <img alt="Cesta Bless" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/2334610-3.jpg">
-        </figure>
-      </a>
-      <h3>
-        Cesta Bless								</h3>
-    </div>
-    <div>
-      <span class="obs">Um belíssimo Baú contendo Pães (sal e Doce), Pão de queijo,(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 585,00																	</div>
-      <a href="/produto/431027/cesta-bless/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="431108">
-
-      <a href="/produto/431108/bau-vinho-e-frios/" title="Baú Vinho e Frios.">
-        <figure>
-          <img alt="Baú Vinho e Frios." loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/697767-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Baú Vinho e Frios.								</h3>
-    </div>
-    <div>
-      <span class="obs">Esse lindo presente contem:<br>
-
-- 01 baú decorado;<br>
-
--(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                              <span>de <del> R$ 350,00</del></span>
-            por R$ 320,00																		</div>
-      <a href="/produto/431108/bau-vinho-e-frios/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="335957">
-
-      <a href="/produto/335957/bac-doce-coracao/" title="Bac Doce Coração">
-        <figure>
-          <img alt="Bac Doce Coração" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/535333-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Bac Doce Coração								</h3>
-    </div>
-    <div>
-      <span class="obs">Esse presente é uma ótima para você que quer tocar o coração(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 260,00																	</div>
-      <a href="/produto/335957/bac-doce-coracao/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="335969">
-
-      <a href="/produto/335969/ramalhete-auge-cor-de-rosa/" title="Ramalhete Auge - Cor de Rosa.">
-        <figure>
-          <img alt="Ramalhete Auge - Cor de Rosa." loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/535349-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Ramalhete Auge - Cor de Rosa.								</h3>
-    </div>
-    <div>
-      <span class="obs">Ramalhete de flores inspirado em criações Italiana, composto(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                              <!---<span>por apenas</span>--->
-            
-            R$ 250,00								</div>
-      <a href="/produto/335969/ramalhete-auge-cor-de-rosa/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="329355">
-
-      <a href="/produto/329355/bac-a-fleurs-com-rosas-pink/" title="Bac à Fleurs com Rosas Pink">
-        <figure>
-          <img alt="Bac à Fleurs com Rosas Pink" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/524862-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Bac à Fleurs com Rosas Pink								</h3>
-    </div>
-    <div>
-      <span class="obs">Esse é nosso “Bac a Fleurs”.<br>
-
-
-Uma delicada(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 330,00																	</div>
-      <a href="/produto/329355/bac-a-fleurs-com-rosas-pink/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="430982">
-
-      <a href="/produto/430982/kit-eu-tenho-um-qsuper-paiq/" title="Kit eu tenho um " super="" pai""="">
-        <figure>
-          <img alt="Kit eu tenho um " super="" pai""="" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/697562-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Kit eu tenho um "Super Pai"								</h3>
-    </div>
-    <div>
-      <span class="obs">Essa é uma ótima opção de presente para supreender seu Pai.(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 310,00																	</div>
-      <a href="/produto/430982/kit-eu-tenho-um-qsuper-paiq/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-<div class="print-separador"></div>					<div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="431077">
-
-      <a href="/produto/431077/cesta-de-cerveja-e-frios/" title="Cesta de Cerveja e frios">
-        <figure>
-          <img alt="Cesta de Cerveja e frios" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/697684-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Cesta de Cerveja e frios								</h3>
-    </div>
-    <div>
-      <span class="obs">Esse presente contem:<br>
-
-<br>
-
-- 03 cervejas importadas;<br>
-
--(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                              <!---<span>por apenas</span>--->
-            
-            R$ 310,00								</div>
-      <a href="/produto/431077/cesta-de-cerveja-e-frios/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="447193">
-
-      <a href="/produto/447193/coroa-funebre-ametista/" title="Coroa Fúnebre Ametista ">
-        <figure>
-          <img alt="Coroa Fúnebre Ametista " loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/726110-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Coroa Fúnebre Ametista 								</h3>
-    </div>
-    <div>
-      <span class="obs">Composta por flores do campo, tango, áster e folhagens.<br>Por(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 360,00																	</div>
-      <a href="/produto/447193/coroa-funebre-ametista/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="448118">
-
-      <a href="/produto/448118/coroa-funebre-jade/" title="Coroa Fúnebre Jade">
-        <figure>
-          <img alt="Coroa Fúnebre Jade" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/727740-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Coroa Fúnebre Jade								</h3>
-    </div>
-    <div>
-      <span class="obs">Ela é composta por Rosas, e flores do campo, sendo seu acabamento(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 440,00																	</div>
-      <a href="/produto/448118/coroa-funebre-jade/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="316000">
-
-      <a href="/produto/316000/cesta-candy/" title="Cesta Candy">
-        <figure>
-          <img alt="Cesta Candy" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/501269-3.jpg">
-        </figure>
-      </a>
-      <h3>
-        Cesta Candy								</h3>
-    </div>
-    <div>
-      <span class="obs">Uma linda cesta contendo pães, torradas, frutas, biscoito doce,(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                              <!---<span>por apenas</span>--->
-            
-            R$ 150,00								</div>
-      <a href="/produto/316000/cesta-candy/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="315993">
-
-      <a href="/produto/315993/cesta-passion/" title="Cesta Passion">
-        <figure>
-          <img alt="Cesta Passion" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/524617-3.jpg">
-        </figure>
-      </a>
-      <h3>
-        Cesta Passion								</h3>
-    </div>
-    <div>
-      <span class="obs">Uma linda cesta contendo Pães, torrada, frios, Frutas, Biscoitos(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                              <!---<span>por apenas</span>--->
-            
-            R$ 270,00								</div>
-      <a href="/produto/315993/cesta-passion/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="329247">
-
-      <a href="/produto/329247/bandeja-good/" title="Bandeja Good">
-        <figure>
-          <img alt="Bandeja Good" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/524724-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Bandeja Good								</h3>
-    </div>
-    <div>
-      <span class="obs">Um belíssima Bandeja Tramontina contendo Pães (sal e Doce),(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                              <!---<span>por apenas</span>--->
-            
-            R$ 410,00								</div>
-      <a href="/produto/329247/bandeja-good/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="335858">
-
-      <a href="/produto/335858/bac-coracao/" title="Bac Coração ">
-        <figure>
-          <img alt="Bac Coração " loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/535234-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Bac Coração 								</h3>
-    </div>
-    <div>
-      <span class="obs">Sabe aquele presente de Arrancar suspiros... é essa Bac Coração!<br>
-
-Ele(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 350,00																	</div>
-      <a href="/produto/335858/bac-coracao/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="335865">
-
-      <a href="/produto/335865/bac-passion/" title="Bac Passion">
-        <figure>
-          <img alt="Bac Passion" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/535241-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Bac Passion								</h3>
-    </div>
-    <div>
-      <span class="obs">Esse presente é desenvolvido exclusivamente para quem quer(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                              <!---<span>por apenas</span>--->
-            
-            R$ 730,00								</div>
-      <a href="/produto/335865/bac-passion/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="335844">
-
-      <a href="/produto/335844/bac-doce-coracao/" title="Bac Doce Coração">
-        <figure>
-          <img alt="Bac Doce Coração" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/535224-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Bac Doce Coração								</h3>
-    </div>
-    <div>
-      <span class="obs">Esse presente é uma ótimo para voce que quer tocar o coração(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 260,00																	</div>
-      <a href="/produto/335844/bac-doce-coracao/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-<div class="print-separador"></div>					<div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="335838">
-
-      <a href="/produto/335838/bac-doce-coracao/" title="Bac Doce Coração">
-        <figure>
-          <img alt="Bac Doce Coração" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/535221-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Bac Doce Coração								</h3>
-    </div>
-    <div>
-      <span class="obs">Esse presente é uma ótima opção para voce que quer tocar(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 350,00																	</div>
-      <a href="/produto/335838/bac-doce-coracao/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="335869">
-
-      <a href="/produto/335869/bac-passion/" title="Bac Passion">
-        <figure>
-          <img alt="Bac Passion" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/535247-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Bac Passion								</h3>
-    </div>
-    <div>
-      <span class="obs">Esse presente é desenvolvido exclusivamente para quem quer(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                              <!---<span>por apenas</span>--->
-            
-            R$ 730,00								</div>
-      <a href="/produto/335869/bac-passion/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="448106">
-
-      <a href="/produto/448106/coroa-funebre-turmalina/" title="Coroa Fúnebre Turmalina">
-        <figure>
-          <img alt="Coroa Fúnebre Turmalina" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/727720-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Coroa Fúnebre Turmalina								</h3>
-    </div>
-    <div>
-      <span class="obs">Composta por flores do campo coloridas, tango, áster e folhagens.<br>(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 360,00																	</div>
-      <a href="/produto/448106/coroa-funebre-turmalina/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="317924">
-
-      <a href="/produto/317924/charme-com-mix-de-flores-nobres/" title="Charme com Mix de flores Nobres">
-        <figure>
-          <img alt="Charme com Mix de flores Nobres" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/504652-3.jpg">
-        </figure>
-      </a>
-      <h3>
-        Charme com Mix de flores Nobres								</h3>
-    </div>
-    <div>
-      <span class="obs">Belissimo agrupado de flores nobres, podendo conter flores desidratadas(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                              <!---<span>por apenas</span>--->
-            
-            R$ 170,00								</div>
-      <a href="/produto/317924/charme-com-mix-de-flores-nobres/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="317955">
-
-      <a href="/produto/317955/charme-com-astromelias/" title="Charme com Astromélias">
-        <figure>
-          <img alt="Charme com Astromélias" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/504730-3.jpg">
-        </figure>
-      </a>
-      <h3>
-        Charme com Astromélias								</h3>
-    </div>
-    <div>
-      <span class="obs">Belíssimo agrupado de Astromélias, podendo ter variação(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                              <!---<span>por apenas</span>--->
-            
-            R$ 150,00								</div>
-      <a href="/produto/317955/charme-com-astromelias/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="317994">
-
-      <a href="/produto/317994/charme-com-rosas-vermelhas/" title="Charme com Rosas vermelhas">
-        <figure>
-          <img alt="Charme com Rosas vermelhas" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/504754-3.jpg">
-        </figure>
-      </a>
-      <h3>
-        Charme com Rosas vermelhas								</h3>
-    </div>
-    <div>
-      <span class="obs">Belíssimo agrupado de Rosas vermelhas para marcar o dia de(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                              <!---<span>por apenas</span>--->
-            
-            R$ 170,00								</div>
-      <a href="/produto/317994/charme-com-rosas-vermelhas/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="318013">
-
-      <a href="/produto/318013/charme-com-rosas-coloridas/" title="Charme com Rosas coloridas">
-        <figure>
-          <img alt="Charme com Rosas coloridas" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/504837-3.jpg">
-        </figure>
-      </a>
-      <h3>
-        Charme com Rosas coloridas								</h3>
-    </div>
-    <div>
-      <span class="obs">Lindo agrupado de Rosas Coloridas para dar um charme a mais(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                              <!---<span>por apenas</span>--->
-            
-            R$ 150,00								</div>
-      <a href="/produto/318013/charme-com-rosas-coloridas/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="318023">
-
-      <a href="/produto/318023/sac-a-fleurs-com-rosas-coloridas/" title="Sac à  Fleurs com Rosas Coloridas">
-        <figure>
-          <img alt="Sac à  Fleurs com Rosas Coloridas" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/524748-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Sac à  Fleurs com Rosas Coloridas								</h3>
-    </div>
-    <div>
-      <span class="obs">Uma delicada bolsa de Flores pronta para surpreender quem você(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                              <!---<span>por apenas</span>--->
-            
-            R$ 149,90								</div>
-      <a href="/produto/318023/sac-a-fleurs-com-rosas-coloridas/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="329365">
-
-      <a href="/produto/329365/bac-a-fleurs-com-rosas-coloridas/" title="Bac à Fleurs com Rosas Coloridas">
-        <figure>
-          <img alt="Bac à Fleurs com Rosas Coloridas" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/524875-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Bac à Fleurs com Rosas Coloridas								</h3>
-    </div>
-    <div>
-      <span class="obs">Esse é nosso “Bac a Fleurs”.
-Uma delicada box(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 330,00																	</div>
-      <a href="/produto/329365/bac-a-fleurs-com-rosas-coloridas/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-<div class="print-separador"></div>					<div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="430998">
-
-      <a href="/produto/430998/bac-qpai-eu-te-amoq/" title="Bac " pai,="" eu="" te="" amo!""="">
-        <figure>
-          <img alt="Bac " pai,="" eu="" te="" amo!""="" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/697573-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Bac "Pai, eu te Amo!"								</h3>
-    </div>
-    <div>
-      <span class="obs">Essa Bac Personalizada incluindo:<br>
-
-- 01 mini cactos ou(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                              <!---<span>por apenas</span>--->
-            
-            R$ 185,00								</div>
-      <a href="/produto/430998/bac-qpai-eu-te-amoq/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="448115">
-
-      <a href="/produto/448115/coroa-funebre-diamante/" title="Coroa Fúnebre Diamante">
-        <figure>
-          <img alt="Coroa Fúnebre Diamante" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/727735-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Coroa Fúnebre Diamante								</h3>
-    </div>
-    <div>
-      <span class="obs">Composta por flores Nobres como Rosas, lirios e Mosquitinhos(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 870,00																	</div>
-      <a href="/produto/448115/coroa-funebre-diamante/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="329379">
-
-      <a href="/produto/329379/bac-a-fleurs-com-rosas-vania/" title="Bac à Fleurs com Rosas Vânia">
-        <figure>
-          <img alt="Bac à Fleurs com Rosas Vânia" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/524888-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Bac à Fleurs com Rosas Vânia								</h3>
-    </div>
-    <div>
-      <span class="obs">Bac à Fleurs com Rosas Coloridas<br>
-
-Esse é nosso “Bac(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 255,00																	</div>
-      <a href="/produto/329379/bac-a-fleurs-com-rosas-vania/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="329382">
-
-      <a href="/produto/329382/bac-a-fleurs-com-rosas-brancas/" title="Bac à Fleurs com Rosas Brancas">
-        <figure>
-          <img alt="Bac à Fleurs com Rosas Brancas" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/524898-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Bac à Fleurs com Rosas Brancas								</h3>
-    </div>
-    <div>
-      <span class="obs">Bac à Fleurs com Rosas Coloridas<br>
-
-Esse é nosso “Bac(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 255,00																	</div>
-      <a href="/produto/329382/bac-a-fleurs-com-rosas-brancas/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="331521">
-
-      <a href="/produto/331521/bac-a-fleurs-com-girassois/" title="Bac à Fleurs Com Girassóis">
-        <figure>
-          <img alt="Bac à Fleurs Com Girassóis" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/528287-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Bac à Fleurs Com Girassóis								</h3>
-    </div>
-    <div>
-      <span class="obs">Esse é nosso “Bac a Fleurs”.
-Uma delicada box(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 280,00																	</div>
-      <a href="/produto/331521/bac-a-fleurs-com-girassois/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="331527">
-
-      <a href="/produto/331527/bac-a-fleurs-com-mix-de-flores-nobres/" title="Bac à Fleurs com mix de Flores Nobres">
-        <figure>
-          <img alt="Bac à Fleurs com mix de Flores Nobres" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/528294-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Bac à Fleurs com mix de Flores Nobres								</h3>
-    </div>
-    <div>
-      <span class="obs">Esse é nosso “Bac a Fleurs”.
-Uma delicada box(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 280,00																	</div>
-      <a href="/produto/331527/bac-a-fleurs-com-mix-de-flores-nobres/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="331528">
-
-      <a href="/produto/331528/bac-a-fleurs-com-mix-de-flores-nobres/" title="Bac à Fleurs com mix de Flores Nobres">
-        <figure>
-          <img alt="Bac à Fleurs com mix de Flores Nobres" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/528305-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Bac à Fleurs com mix de Flores Nobres								</h3>
-    </div>
-    <div>
-      <span class="obs">Esse é nosso “Bac a Fleurs”.
-Uma delicada box(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 280,00																	</div>
-      <a href="/produto/331528/bac-a-fleurs-com-mix-de-flores-nobres/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="331534">
-
-      <a href="/produto/331534/bac-a-fleurs-com-mix-de-flores-nobres-banco-e-verde/" title="Bac à Fleurs com mix de Flores Nobres (banco e verde)">
-        <figure>
-          <img alt="Bac à Fleurs com mix de Flores Nobres (banco e verde)" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/528309-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Bac à Fleurs com mix de Flores Nobres (banco e verde)								</h3>
-    </div>
-    <div>
-      <span class="obs">Esse é nosso “Bac a Fleurs”.
-Uma delicada box(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 290,00																	</div>
-      <a href="/produto/331534/bac-a-fleurs-com-mix-de-flores-nobres-banco-e-verde/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="331537">
-
-      <a href="/produto/331537/bac-a-fleurs-com-mix-de-flores-nobres-tons-rose/" title="Bac à Fleurs com mix de Flores Nobres Tons Rosê">
-        <figure>
-          <img alt="Bac à Fleurs com mix de Flores Nobres Tons Rosê" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/528321-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Bac à Fleurs com mix de Flores Nobres Tons Rosê								</h3>
-    </div>
-    <div>
-      <span class="obs">Esse é nosso “Bac a Fleurs”.
-Uma delicada box(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 310,00																	</div>
-      <a href="/produto/331537/bac-a-fleurs-com-mix-de-flores-nobres-tons-rose/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-<div class="print-separador"></div>					<div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="332738">
-
-      <a href="/produto/332738/bobbles-personanizado/" title="Bobbles Personanizado">
-        <figure>
-          <img alt="Bobbles Personanizado" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/530191-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Bobbles Personanizado								</h3>
-    </div>
-    <div>
-      <span class="obs">Essa é uma ótima sugestão para você que quer complementar(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 290,00																	</div>
-      <a href="/produto/332738/bobbles-personanizado/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="332744">
-
-      <a href="/produto/332744/cesta-happy-birthday/" title="Cesta Happy Birthday">
-        <figure>
-          <img alt="Cesta Happy Birthday" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/530224-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Cesta Happy Birthday								</h3>
-    </div>
-    <div>
-      <span class="obs">Essa é uma ótima sugestão para você que quer complementar(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 810,00																	</div>
-      <a href="/produto/332744/cesta-happy-birthday/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="332839">
-
-      <a href="/produto/332839/carta-de-amor-bobbles-personalizada/" title="Carta de Amor + Bobbles Personalizada">
-        <figure>
-          <img alt="Carta de Amor + Bobbles Personalizada" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/530408-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Carta de Amor + Bobbles Personalizada								</h3>
-    </div>
-    <div>
-      <span class="obs">Essa é uma ótima sugestão para você que quer complementar(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 290,00																	</div>
-      <a href="/produto/332839/carta-de-amor-bobbles-personalizada/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="332847">
-
-      <a href="/produto/332847/bac-a-fleus-bobbles-personalizada/" title="Bac à Fleus + Bobbles Personalizada">
-        <figure>
-          <img alt="Bac à Fleus + Bobbles Personalizada" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/530413-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Bac à Fleus + Bobbles Personalizada								</h3>
-    </div>
-    <div>
-      <span class="obs">
-Esse é nosso “Bac a Fleurs”.
-Uma delicada box(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 330,00																	</div>
-      <a href="/produto/332847/bac-a-fleus-bobbles-personalizada/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="332850">
-
-      <a href="/produto/332850/bac-a-fleurs-bobble-personalizada/" title="Bac à Fleurs + Bobble Personalizada">
-        <figure>
-          <img alt="Bac à Fleurs + Bobble Personalizada" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/530422-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Bac à Fleurs + Bobble Personalizada								</h3>
-    </div>
-    <div>
-      <span class="obs">
-Esse é nosso “Bac a Fleurs”.
-Uma delicada box(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 390,00																	</div>
-      <a href="/produto/332850/bac-a-fleurs-bobble-personalizada/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="332859">
-
-      <a href="/produto/332859/buques-de-lirios-boca-de-leao/" title="Buques de Lírios + Boca de leão">
-        <figure>
-          <img alt="Buques de Lírios + Boca de leão" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/530432-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Buques de Lírios + Boca de leão								</h3>
-    </div>
-    <div>
-      <span class="obs">Belissimo buque de lÍrios e Boca de leão.<br>
-
-Envolto em(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 480,00																	</div>
-      <a href="/produto/332859/buques-de-lirios-boca-de-leao/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="332861">
-
-      <a href="/produto/332861/buque-com-30-rosas-e-folhagens/" title="Buque com 30 rosas e folhagens">
-        <figure>
-          <img alt="Buque com 30 rosas e folhagens" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/530439-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Buque com 30 rosas e folhagens								</h3>
-    </div>
-    <div>
-      <span class="obs">Esse lindo buque de flores estilo moderninho é composto por(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                              <!---<span>por apenas</span>--->
-            
-            R$ 450,00								</div>
-      <a href="/produto/332861/buque-com-30-rosas-e-folhagens/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="332864">
-
-      <a href="/produto/332864/buque-100-rosas-cor-de-rosa/" title="Buque 100 rosas cor de Rosa">
-        <figure>
-          <img alt="Buque 100 rosas cor de Rosa" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/530446-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Buque 100 rosas cor de Rosa								</h3>
-    </div>
-    <div>
-      <span class="obs">Esse lindo buque de flores estilo moderninho é composto por(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                              <!---<span>por apenas</span>--->
-            
-            R$ 1.300,00								</div>
-      <a href="/produto/332864/buque-100-rosas-cor-de-rosa/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="332894">
-
-      <a href="/produto/332894/agrupado-de-rosas-vermelhas/" title="Agrupado de Rosas Vermelhas">
-        <figure>
-          <img alt="Agrupado de Rosas Vermelhas" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/530488-3.jpg">
-        </figure>
-      </a>
-      <h3>
-        Agrupado de Rosas Vermelhas								</h3>
-    </div>
-    <div>
-      <span class="obs">As Rosas Representa o amor e suas nuances.<br>
-
-Para cada(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 220,00																	</div>
-      <a href="/produto/332894/agrupado-de-rosas-vermelhas/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-<div class="print-separador"></div>					<div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="332908">
-
-      <a href="/produto/332908/agrupado-de-rosas-coloridas/" title="Agrupado de Rosas Coloridas">
-        <figure>
-          <img alt="Agrupado de Rosas Coloridas" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/530522-3.JPG">
-        </figure>
-      </a>
-      <h3>
-        Agrupado de Rosas Coloridas								</h3>
-    </div>
-    <div>
-      <span class="obs">As Rosas Representam o amor e suas nuances.<br>
-
-Para cada(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 150,00																	</div>
-      <a href="/produto/332908/agrupado-de-rosas-coloridas/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="332913">
-
-      <a href="/produto/332913/buque-30-rosas-pink-e-laranja/" title="Buque 30 Rosas Pink e Laranja">
-        <figure>
-          <img alt="Buque 30 Rosas Pink e Laranja" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/530525-3.jpg">
-        </figure>
-      </a>
-      <h3>
-        Buque 30 Rosas Pink e Laranja								</h3>
-    </div>
-    <div>
-      <span class="obs"> <br>Esse lindo buque de flores estilo moderninho é composto(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                              <!---<span>por apenas</span>--->
-            
-            R$ 450,00								</div>
-      <a href="/produto/332913/buque-30-rosas-pink-e-laranja/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="335862">
-
-      <a href="/produto/335862/bac-coracao/" title="Bac Coração ">
-        <figure>
-          <img alt="Bac Coração " loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/535237-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Bac Coração 								</h3>
-    </div>
-    <div>
-      <span class="obs">Sabe aquele presente de Arrancar suspiros... é essa Bac Coração!<br>
-
-Ele(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 760,00																	</div>
-      <a href="/produto/335862/bac-coracao/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="334996">
-
-      <a href="/produto/334996/bac-tesouro-preta/" title="Bac Tesouro - Preta">
-        <figure>
-          <img alt="Bac Tesouro - Preta" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/533883-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Bac Tesouro - Preta								</h3>
-    </div>
-    <div>
-      <span class="obs">Esse presente é desenvolvido exclusivamente para quem quer(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                              <!---<span>por apenas</span>--->
-            
-            R$ 430,00								</div>
-      <a href="/produto/334996/bac-tesouro-preta/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="335853">
-
-      <a href="/produto/335853/bac-coracao/" title="Bac Coração ">
-        <figure>
-          <img alt="Bac Coração " loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/535226-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Bac Coração 								</h3>
-    </div>
-    <div>
-      <span class="obs">Sabe aquele presente de Arrancar suspiros... é essa Bac Coração!<br>
-
-Ele(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 290,00																	</div>
-      <a href="/produto/335853/bac-coracao/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="318019">
-
-      <a href="/produto/318019/sac-a-fleurs-com-rosas-vermelhas/" title="Sac à Fleurs com Rosas vermelhas">
-        <figure>
-          <img alt="Sac à Fleurs com Rosas vermelhas" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/504864-3.jpg">
-        </figure>
-      </a>
-      <h3>
-        Sac à Fleurs com Rosas vermelhas								</h3>
-    </div>
-    <div>
-      <span class="obs">Uma delicada bolsa de Rosas vermelhas pronta para surpreender(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                              <span>de <del> R$ 220,00</del></span>
-            por R$ 170,00																		</div>
-      <a href="/produto/318019/sac-a-fleurs-com-rosas-vermelhas/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="332717">
-
-      <a href="/produto/332717/carta-de-amor/" title="Carta de Amor">
-        <figure>
-          <img alt="Carta de Amor" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/530178-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Carta de Amor								</h3>
-    </div>
-    <div>
-      <span class="obs">Quando nos falta palavra enviamos Flores!
-E a Carta de Amor(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                              <!---<span>por apenas</span>--->
-            
-            R$ 190,00								</div>
-      <a href="/produto/332717/carta-de-amor/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="448111">
-
-      <a href="/produto/448111/coroa-funebre-rubi/" title="Coroa Fúnebre Rubi">
-        <figure>
-          <img alt="Coroa Fúnebre Rubi" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/727724-3.jpeg">
-        </figure>
-      </a>
-      <h3>
-        Coroa Fúnebre Rubi								</h3>
-    </div>
-    <div>
-      <span class="obs">A montagem dessa coroa é feita com separação de cores e em(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                                <span>a partir de</span>
-              R$ 560,00																	</div>
-      <a href="/produto/448111/coroa-funebre-rubi/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-        <div class="box-produto">
-  <form action="/add-carrinho/" method="post">
-    <div>
-      <input type="hidden" name="tipo" value="add">
-      <input type="hidden" name="id_produto" value="332930">
-
-      <a href="/produto/332930/buque-colors-pelucias-chocolate/" title="Buque Colors + Pelúcias + Chocolate">
-        <figure>
-          <img alt="Buque Colors + Pelúcias + Chocolate" loading="lazy" src="https://cdn.meucatalogodigital.com/belaflor/530561-3.jpg">
-        </figure>
-      </a>
-      <h3>
-        Buque Colors + Pelúcias + Chocolate								</h3>
-    </div>
-    <div>
-      <span class="obs">Esse é um ótimo presente!
-
-Selecionamos um mix de flores(...)</span>
-    </div>
-    <div>
-      <div class="valor">
-                              <!---<span>por apenas</span>--->
-            
-            R$ 240,00								</div>
-      <a href="/produto/332930/buque-colors-pelucias-chocolate/" title="Comprar" class="btn btn-color">Comprar</a>
-    </div>
-  </form>
-</div>
-<div class="print-separador"></div>			</div>
-  </div>
-</div>
-</a>
-<footer id="rodape">
-	<div class="container">
-		<p>
-			Bela Flor - Flores e Decorações <br>
-			Av. Mal Deodoro, 1827, Esq. com Isaac Povoas - Cuiabá/MT		</p>
-
-		<div class="redes">
-							<a href="https://www.facebook.com/belaflorCuiaba" target="_blank" title="Facebook">
-					<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
-						<path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-3 7h-1.924c-.615 0-1.076.252-1.076.889v1.111h3l-.238 3h-2.762v8h-3v-8h-2v-3h2v-1.923c0-2.022 1.064-3.077 3.461-3.077h2.539v3z"></path>
-					</svg>
-				</a>
-							<a href="https://www.instagram.com/belaflorcuiaba/" target="_blank" title="Instagram">
-					<svg width="22" height="22" viewBox="0 0 169.063 169.063">
-						<path d="M122.406,0H46.654C20.929,0,0,20.93,0,46.655v75.752c0,25.726,20.929,46.655,46.654,46.655h75.752
-		c25.727,0,46.656-20.93,46.656-46.655V46.655C169.063,20.93,148.133,0,122.406,0z M154.063,122.407
-		c0,17.455-14.201,31.655-31.656,31.655H46.654C29.2,154.063,15,139.862,15,122.407V46.655C15,29.201,29.2,15,46.654,15h75.752
-		c17.455,0,31.656,14.201,31.656,31.655V122.407z"></path>
-						<path d="M84.531,40.97c-24.021,0-43.563,19.542-43.563,43.563c0,24.02,19.542,43.561,43.563,43.561s43.563-19.541,43.563-43.561
-		C128.094,60.512,108.552,40.97,84.531,40.97z M84.531,113.093c-15.749,0-28.563-12.812-28.563-28.561
-		c0-15.75,12.813-28.563,28.563-28.563s28.563,12.813,28.563,28.563C113.094,100.281,100.28,113.093,84.531,113.093z"></path>
-						<path d="M129.921,28.251c-2.89,0-5.729,1.17-7.77,3.22c-2.051,2.04-3.23,4.88-3.23,7.78c0,2.891,1.18,5.73,3.23,7.78
-		c2.04,2.04,4.88,3.22,7.77,3.22c2.9,0,5.73-1.18,7.78-3.22c2.05-2.05,3.22-4.89,3.22-7.78c0-2.9-1.17-5.74-3.22-7.78
-		C135.661,29.421,132.821,28.251,129.921,28.251z"></path>
-					</svg>
-				</a>
-					</div>
-
-	</div>
-	
-</footer>
-
-<!-- WHATSAPP FLUTUANTE -->
-<div class="whats">
-      <a href="https://wa.me/5581998636465?text= Olá, Dona Terezinha! Tudo bem?" target="_blank"> 
-<img id = "logo-wpp-flutuante" src="fotos/icones/wpp-ico.png" alt="Fale Conosco pelo Whatsapp" title="Fale Conosco pelo Whatsapp">
-    </a>
-</div> 
-
-<!-- DECLARAÇÃO DE SCRIPTS -->
-<script src="js/carrossel.js"></script>
-<script src="js/mobile-navbar.js"></script>
-<script src="js/tema.js"></script>
-
-</body>
-<footer><br><br><br><br><br><br><br><br></footer>
+      <button
+        id="nextButton"
+        style="
+          margin: 20px;
+          padding: 20px;
+          font-size: 20px;
+          background-color: transparent;
+          border: none;
+          border-radius: 50%;
+        "
+      >
+        <i
+          class="fa-solid fa-chevron-up fa-rotate-90"
+          style="color: #000000"
+        ></i>
+      </button>
+    </div>
+
+    <!-- TITULO DOS PRODUTOS -->
+
+    <h1 style="font-size: 20px; text-align: center; margin: 5vw">
+      PRODUTOS EM DESTAQUE
+    </h1>
+
+    <!-- CATALOGO -->
+    <div class="box-flex">
+      <div class="container">
+        <div class="listagem-produtos">
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="1373256" />
+
+                <a
+                  href="/produto/1373256/buque-de-gerberas/"
+                  title="Buquê de Gérberas"
+                >
+                  <figure>
+                    <img
+                      alt="Buquê de Gérberas"
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/2347638-3.jpeg"
+                    />
+                  </figure>
+                </a>
+                <h3>Buquê de Gérberas</h3>
+              </div>
+              <div>
+                <span class="obs"
+                  >Um lindo Buque pronto para transmitir os mais lindos
+                  sentimentos(...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <!---<span>por apenas</span>--->
+
+                  R$ 350,00
+                </div>
+                <a
+                  href="/produto/1373256/buque-de-gerberas/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="1340690" />
+
+                <a
+                  href="/produto/1340690/mix-do-florista/"
+                  title="Mix do Florista"
+                >
+                  <figure>
+                    <img
+                      alt="Mix do Florista"
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/2286482-3.jpeg"
+                    />
+                  </figure>
+                </a>
+                <h3>Mix do Florista</h3>
+              </div>
+              <div>
+                <span class="obs"
+                  >Esse buque é muito especial, pois deixamos a criação
+                  dele(...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <!---<span>por apenas</span>--->
+
+                  R$ 130,00
+                </div>
+                <a
+                  href="/produto/1340690/mix-do-florista/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="1331374" />
+
+                <a
+                  href="/produto/1331374/sac-a-fleurs-com-mix-de-flores/"
+                  title="Sac à Fleurs com Mix de Flores"
+                >
+                  <figure>
+                    <img
+                      alt="Sac à Fleurs com Mix de Flores"
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/2270459-3.jpg"
+                    />
+                  </figure>
+                </a>
+                <h3>Sac à Fleurs com Mix de Flores</h3>
+              </div>
+              <div>
+                <span class="obs"
+                  >Uma delicada bolsa com Mix de Flores pronta para
+                  surpreender(...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <!---<span>por apenas</span>--->
+
+                  R$ 170,00
+                </div>
+                <a
+                  href="/produto/1331374/sac-a-fleurs-com-mix-de-flores/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="1211545" />
+
+                <a
+                  href="/produto/1211545/magnificent-love/"
+                  title="Magnificent Love"
+                >
+                  <figure>
+                    <img
+                      alt="Magnificent Love"
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/2056497-3.jpg"
+                    />
+                  </figure>
+                </a>
+                <h3>Magnificent Love</h3>
+              </div>
+              <div>
+                <span class="obs"
+                  >Agrupado de 12 Rosas, transformando em um lindo Coração!
+                  Podendo(...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <span>a partir de</span>
+                  R$ 280,00
+                </div>
+                <a
+                  href="/produto/1211545/magnificent-love/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="1211396" />
+
+                <a href="/produto/1211396/saved-love/" title="Saved Love">
+                  <figure>
+                    <img
+                      alt="Saved Love"
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/2056236-3.jpg"
+                    />
+                  </figure>
+                </a>
+                <h3>Saved Love</h3>
+              </div>
+              <div>
+                <span class="obs"
+                  >Uma linda Caixa contendo de 14 a 20 Rosas. Perfeita para
+                  demonstrar(...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <span>a partir de</span>
+                  R$ 320,00
+                </div>
+                <a
+                  href="/produto/1211396/saved-love/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="1211391" />
+
+                <a
+                  href="/produto/1211391/carta-de-amor-ferrero-rocher/"
+                  title="Carta de Amor + Ferrero Rocher"
+                >
+                  <figure>
+                    <img
+                      alt="Carta de Amor + Ferrero Rocher"
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/2056228-3.jpg"
+                    />
+                  </figure>
+                </a>
+                <h3>Carta de Amor + Ferrero Rocher</h3>
+              </div>
+              <div>
+                <span class="obs"
+                  >Uma linda Carta de Amor composta com Flores Nobres
+                  Selecionadas,(...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <span>a partir de</span>
+                  R$ 280,00
+                </div>
+                <a
+                  href="/produto/1211391/carta-de-amor-ferrero-rocher/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="1194408" />
+
+                <a
+                  href="/produto/1194408/orquidea-phalaenopse-branca-02-hastes/"
+                  title="Orquídea Phalaenopse Branca 02 hastes"
+                >
+                  <figure>
+                    <img
+                      alt="Orquídea Phalaenopse Branca 02 hastes"
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/2025783-3.jpeg"
+                    />
+                  </figure>
+                </a>
+                <h3>Orquídea Phalaenopse Branca 02 hastes</h3>
+              </div>
+              <div>
+                <span class="obs"
+                  >Casa florida é sinônimo de alegria. E nada melhor do
+                  que(...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <!---<span>por apenas</span>--->
+
+                  R$ 190,00
+                </div>
+                <a
+                  href="/produto/1194408/orquidea-phalaenopse-branca-02-hastes/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="1194405" />
+
+                <a
+                  href="/produto/1194405/orquidea-frozen-embalagem-especial/"
+                  title="Orquídea Frozen embalagem especial."
+                >
+                  <figure>
+                    <img
+                      alt="Orquídea Frozen embalagem especial."
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/2025778-3.jpeg"
+                    />
+                  </figure>
+                </a>
+                <h3>Orquídea Frozen embalagem especial.</h3>
+              </div>
+              <div>
+                <span class="obs"
+                  >Como não se encantar pela linda Orquídea Frozen? <br />
+
+                  Com(...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <!---<span>por apenas</span>--->
+
+                  R$ 320,00
+                </div>
+                <a
+                  href="/produto/1194405/orquidea-frozen-embalagem-especial/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="1194403" />
+
+                <a
+                  href="/produto/1194403/orquidea-cascata-lilas-em-cachepo-madeira/"
+                  title="Orquídea Cascata Lilás em cachepô Madeira"
+                >
+                  <figure>
+                    <img
+                      alt="Orquídea Cascata Lilás em cachepô Madeira"
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/2025777-3.jpeg"
+                    />
+                  </figure>
+                </a>
+                <h3>Orquídea Cascata Lilás em cachepô Madeira</h3>
+              </div>
+              <div>
+                <span class="obs"
+                  >Orquídea Cascata Roxa<br />
+
+                  Orquídea Cascata Roxa Phalaenopsis,(...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <!---<span>por apenas</span>--->
+
+                  R$ 280,00
+                </div>
+                <a
+                  href="/produto/1194403/orquidea-cascata-lilas-em-cachepo-madeira/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="1194402" />
+
+                <a
+                  href="/produto/1194402/orquidea-cascata-branca-em-cachepo-madeira-com-margarida/"
+                  title="Orquídea Cascata branca em cachepô Madeira com margarida"
+                >
+                  <figure>
+                    <img
+                      alt="Orquídea Cascata branca em cachepô Madeira com margarida"
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/2025776-3.jpeg"
+                    />
+                  </figure>
+                </a>
+                <h3>
+                  Orquídea Cascata branca em cachepô Madeira com margarida
+                </h3>
+              </div>
+              <div>
+                <span class="obs"></span>
+              </div>
+              <div>
+                <div class="valor">
+                  <!---<span>por apenas</span>--->
+
+                  R$ 310,00
+                </div>
+                <a
+                  href="/produto/1194402/orquidea-cascata-branca-em-cachepo-madeira-com-margarida/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="print-separador"></div>
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="1024171" />
+
+                <a href="/produto/1024171/quiet-love/" title="Quiet Love">
+                  <figure>
+                    <img
+                      alt="Quiet Love"
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/1732582-3.jpeg"
+                    />
+                  </figure>
+                </a>
+                <h3>Quiet Love</h3>
+              </div>
+              <div>
+                <span class="obs"
+                  >O copo-de-leite representa a pureza e a inocência,
+                  associando-se(...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <span>a partir de</span>
+                  R$ 320,00
+                </div>
+                <a
+                  href="/produto/1024171/quiet-love/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="964494" />
+
+                <a href="/produto/964494/petit-charme/" title="Petit Charme">
+                  <figure>
+                    <img
+                      alt="Petit Charme"
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/1624606-3.jpeg"
+                    />
+                  </figure>
+                </a>
+                <h3>Petit Charme</h3>
+              </div>
+              <div>
+                <span class="obs"
+                  >Um Lindo Deitadinho de Mix de Flores. Uma lembrança
+                  Perfeita(...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <span>a partir de</span>
+                  R$ 80,00
+                </div>
+                <a
+                  href="/produto/964494/petit-charme/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="933116" />
+
+                <a
+                  href="/produto/933116/mix-do-florista/"
+                  title="Mix do Florista"
+                >
+                  <figure>
+                    <img
+                      alt="Mix do Florista"
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/1567565-3.jpeg"
+                    />
+                  </figure>
+                </a>
+                <h3>Mix do Florista</h3>
+              </div>
+              <div>
+                <span class="obs"
+                  >Esse buque é muito especial, pois deixamos a criação
+                  dele(...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <span>a partir de</span>
+                  R$ 340,00
+                </div>
+                <a
+                  href="/produto/933116/mix-do-florista/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="931825" />
+
+                <a
+                  href="/produto/931825/carta-de-amor-bobbles-personalizada/"
+                  title="Carta de Amor + Bobbles Personalizada"
+                >
+                  <figure>
+                    <img
+                      alt="Carta de Amor + Bobbles Personalizada"
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/1565175-3.jpeg"
+                    />
+                  </figure>
+                </a>
+                <h3>Carta de Amor + Bobbles Personalizada</h3>
+              </div>
+              <div>
+                <span class="obs"
+                  >Essa é uma ótima sugestão para você que quer
+                  complementar(...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <span>a partir de</span>
+                  R$ 290,00
+                </div>
+                <a
+                  href="/produto/931825/carta-de-amor-bobbles-personalizada/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="914834" />
+
+                <a
+                  href="/produto/914834/cesta-happy-birthday/"
+                  title="Cesta Happy Birthday"
+                >
+                  <figure>
+                    <img
+                      alt="Cesta Happy Birthday"
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/1535837-3.jpeg"
+                    />
+                  </figure>
+                </a>
+                <h3>Cesta Happy Birthday</h3>
+              </div>
+              <div>
+                <span class="obs">
+                  <br />
+
+                  Um belíssimo Baú contendo Pães (sal e Doce), Pão(...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <span>a partir de</span>
+                  R$ 680,00
+                </div>
+                <a
+                  href="/produto/914834/cesta-happy-birthday/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="834849" />
+
+                <a href="/produto/834849/doce-monamour/" title="Doce Monamour">
+                  <figure>
+                    <img
+                      alt="Doce Monamour"
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/1399502-3.jpg"
+                    />
+                  </figure>
+                </a>
+                <h3>Doce Monamour</h3>
+              </div>
+              <div>
+                <span class="obs">
+                  Agrupado com 12 rosas vermelhas e ruscus com laço e 8
+                  bombons(...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <span>a partir de</span>
+                  R$ 250,00
+                </div>
+                <a
+                  href="/produto/834849/doce-monamour/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="834556" />
+
+                <a
+                  href="/produto/834556/buque-apaixonado/"
+                  title="Buque Apaixonado"
+                >
+                  <figure>
+                    <img
+                      alt="Buque Apaixonado"
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/1398968-3.jpeg"
+                    />
+                  </figure>
+                </a>
+                <h3>Buque Apaixonado</h3>
+              </div>
+              <div>
+                <span class="obs"
+                  >Buque Apaixonado<br />
+
+                  Maravilhoso Buque com 100 Rosas vermelhas(...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <span>a partir de</span>
+                  R$ 1.830,00
+                </div>
+                <a
+                  href="/produto/834556/buque-apaixonado/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="print-separador"></div>
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="748823" />
+
+                <a
+                  href="/produto/748823/carta-de-amor-ferrero-rocher/"
+                  title="Carta de Amor + Ferrero Rocher"
+                >
+                  <figure>
+                    <img
+                      alt="Carta de Amor + Ferrero Rocher"
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/1251658-3.jpg"
+                    />
+                  </figure>
+                </a>
+                <h3>Carta de Amor + Ferrero Rocher</h3>
+              </div>
+              <div>
+                <span class="obs"
+                  >Uma linda Carta de Amor composta com Flores Nobres
+                  Selecionadas,(...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <span>a partir de</span>
+                  R$ 280,00
+                </div>
+                <a
+                  href="/produto/748823/carta-de-amor-ferrero-rocher/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="732415" />
+
+                <a
+                  href="/produto/732415/buque-belle-fleur/"
+                  title="Buque Belle fleur"
+                >
+                  <figure>
+                    <img
+                      alt="Buque Belle fleur"
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/1221747-3.jpg"
+                    />
+                  </figure>
+                </a>
+                <h3>Buque Belle fleur</h3>
+              </div>
+              <div>
+                <span class="obs"
+                  >Um Buque inspirado em Lindas Mulheres Cheio de beleza e
+                  significados! Compõe-se(...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <span>a partir de</span>
+                  R$ 450,00
+                </div>
+                <a
+                  href="/produto/732415/buque-belle-fleur/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="693580" />
+
+                <a href="/produto/693580/buque-love-it/" title="Buque Love It">
+                  <figure>
+                    <img
+                      alt="Buque Love It"
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/1152537-3.jpeg"
+                    />
+                  </figure>
+                </a>
+                <h3>Buque Love It</h3>
+              </div>
+              <div>
+                <span class="obs"
+                  >Aproximadamente 45 a 50 Rosas, prontas para cumprir o seu
+                  papel:(...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <span>a partir de</span>
+                  R$ 700,00
+                </div>
+                <a
+                  href="/produto/693580/buque-love-it/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="670206" />
+
+                <a
+                  href="/produto/670206/buque-amour-supreme/"
+                  title="Buque Amour Suprême"
+                >
+                  <figure>
+                    <img
+                      alt="Buque Amour Suprême"
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/1110371-3.jpeg"
+                    />
+                  </figure>
+                </a>
+                <h3>Buque Amour Suprême</h3>
+              </div>
+              <div>
+                <span class="obs"
+                  >Como é o Amor Supreme pra você? Nós usamos as Flores
+                  para(...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <span>a partir de</span>
+                  R$ 290,00
+                </div>
+                <a
+                  href="/produto/670206/buque-amour-supreme/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="670185" />
+
+                <a href="/produto/670185/buque-luxo/" title="Buque Luxo">
+                  <figure>
+                    <img
+                      alt="Buque Luxo"
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/1110344-3.jpeg"
+                    />
+                  </figure>
+                </a>
+                <h3>Buque Luxo</h3>
+              </div>
+              <div>
+                <span class="obs"
+                  >Um lindo e elegante buque, composto por Astromélias,
+                  Tango(...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <span>a partir de</span>
+                  R$ 550,00
+                </div>
+                <a
+                  href="/produto/670185/buque-luxo/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="670167" />
+
+                <a
+                  href="/produto/670167/ramalhete-de-girassois/"
+                  title="Ramalhete de Girassóis"
+                >
+                  <figure>
+                    <img
+                      alt="Ramalhete de Girassóis"
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/1110314-3.jpg"
+                    />
+                  </figure>
+                </a>
+                <h3>Ramalhete de Girassóis</h3>
+              </div>
+              <div>
+                <span class="obs"
+                  >Volte-se para o que te faz bem! 🌻 Contagie o mundo com
+                  sua(...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <span>a partir de</span>
+                  R$ 180,00
+                </div>
+                <a
+                  href="/produto/670167/ramalhete-de-girassois/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="640475" />
+
+                <a
+                  href="/produto/640475/bac-wine-chocolate/"
+                  title="Bac Wine Chocolate"
+                >
+                  <figure>
+                    <img
+                      alt="Bac Wine Chocolate"
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/1060107-3.jpg"
+                    />
+                  </figure>
+                </a>
+                <h3>Bac Wine Chocolate</h3>
+              </div>
+              <div>
+                <span class="obs"
+                  >Toda conquista merece ser celebrada! Juntamos nesse
+                  presente(...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <span>a partir de</span>
+                  R$ 330,00
+                </div>
+                <a
+                  href="/produto/640475/bac-wine-chocolate/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="590397" />
+
+                <a
+                  href="/produto/590397/coroa-funebre-topazio-azul/"
+                  title="Coroa Fúnebre Topázio Azul"
+                >
+                  <figure>
+                    <img
+                      alt="Coroa Fúnebre Topázio Azul"
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/974203-3.jpeg"
+                    />
+                  </figure>
+                </a>
+                <h3>Coroa Fúnebre Topázio Azul</h3>
+              </div>
+              <div>
+                <span class="obs"
+                  >Coroa Fúnebre composta por flores selecionadas :
+                  Hortênsias,(...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <span>a partir de</span>
+                  R$ 1.600,00
+                </div>
+                <a
+                  href="/produto/590397/coroa-funebre-topazio-azul/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="print-separador"></div>
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="586577" />
+
+                <a
+                  href="/produto/586577/sac-a-fleurs-com-rosas-brancas/"
+                  title="Sac a Fleurs com Rosas brancas"
+                >
+                  <figure>
+                    <img
+                      alt="Sac a Fleurs com Rosas brancas"
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/967353-3.jpeg"
+                    />
+                  </figure>
+                </a>
+                <h3>Sac a Fleurs com Rosas brancas</h3>
+              </div>
+              <div>
+                <span class="obs"
+                  >Sac à Fleurs com Rosas Brancas<br />
+
+                  Uma delicada bolsa de(...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <span>a partir de</span>
+                  R$ 149,90
+                </div>
+                <a
+                  href="/produto/586577/sac-a-fleurs-com-rosas-brancas/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="544270" />
+
+                <a
+                  href="/produto/544270/orquidea-branca/"
+                  title="Orquídea Branca"
+                >
+                  <figure>
+                    <img
+                      alt="Orquídea Branca"
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/892667-3.jpeg"
+                    />
+                  </figure>
+                </a>
+                <h3>Orquídea Branca</h3>
+              </div>
+              <div>
+                <span class="obs"
+                  >Casa florida é sinônimo de alegria. E nada melhor do
+                  que(...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <span>a partir de</span>
+                  R$ 220,00
+                </div>
+                <a
+                  href="/produto/544270/orquidea-branca/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="544251" />
+
+                <a
+                  href="/produto/544251/orquidea-frozen/"
+                  title="Orquídea Frozen"
+                >
+                  <figure>
+                    <img
+                      alt="Orquídea Frozen"
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/892624-3.jpeg"
+                    />
+                  </figure>
+                </a>
+                <h3>Orquídea Frozen</h3>
+              </div>
+              <div>
+                <span class="obs"
+                  >Como não se encantar pela linda Orquídea Frozen? <br />
+
+                  Com(...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <span>a partir de</span>
+                  R$ 250,00
+                </div>
+                <a
+                  href="/produto/544251/orquidea-frozen/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="544231" />
+
+                <a
+                  href="/produto/544231/orquidea-cascata-amarela/"
+                  title="Orquídea Cascata Amarela"
+                >
+                  <figure>
+                    <img
+                      alt="Orquídea Cascata Amarela"
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/892578-3.jpeg"
+                    />
+                  </figure>
+                </a>
+                <h3>Orquídea Cascata Amarela</h3>
+              </div>
+              <div>
+                <span class="obs"
+                  >Orquídea Cascata Amarela Phalaenopsis pote 12 já
+                  embalada(...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <span>a partir de</span>
+                  R$ 230,00
+                </div>
+                <a
+                  href="/produto/544231/orquidea-cascata-amarela/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="542408" />
+
+                <a
+                  href="/produto/542408/50-tons-de-rosa/"
+                  title="50 Tons de Rosa"
+                >
+                  <figure>
+                    <img
+                      alt="50 Tons de Rosa"
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/889355-3.jpeg"
+                    />
+                  </figure>
+                </a>
+                <h3>50 Tons de Rosa</h3>
+              </div>
+              <div>
+                <span class="obs"
+                  >Esse é o resultado quando juntamos varias espécies de
+                  flores(...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <span>a partir de</span>
+                  R$ 350,00
+                </div>
+                <a
+                  href="/produto/542408/50-tons-de-rosa/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="533345" />
+
+                <a
+                  href="/produto/533345/buque-de-noiva-qserenaq/"
+                  title="Buquê de noiva "
+                  serena
+                >
+                  <figure>
+                    <img
+                      alt="Buquê de noiva "
+                      serena
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/874649-3.jpeg"
+                    />
+                  </figure>
+                </a>
+                <h3>Buquê de noiva "Serena"</h3>
+              </div>
+              <div>
+                <span class="obs"
+                  >E por falar em Girassóis ele está entre a preferência
+                  das(...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <span>a partir de</span>
+                  R$ 180,00
+                </div>
+                <a
+                  href="/produto/533345/buque-de-noiva-qserenaq/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="533301" />
+
+                <a
+                  href="/produto/533301/buque-de-noiva-qperolaq/"
+                  title="Buquê de noiva "
+                  pérola
+                >
+                  <figure>
+                    <img
+                      alt="Buquê de noiva "
+                      pérola
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/874608-3.jpeg"
+                    />
+                  </figure>
+                </a>
+                <h3>Buquê de noiva "Pérola"</h3>
+              </div>
+              <div>
+                <span class="obs"
+                  >O nosso "Buque Pérola" é de arrancar sorrisos com(...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <span>a partir de</span>
+                  R$ 250,00
+                </div>
+                <a
+                  href="/produto/533301/buque-de-noiva-qperolaq/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="532590" />
+
+                <a
+                  href="/produto/532590/buque-mix-de-flores-desconstruido/"
+                  title="Buque Mix de Flores Desconstruído "
+                >
+                  <figure>
+                    <img
+                      alt="Buque Mix de Flores Desconstruído "
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/873275-3.jpeg"
+                    />
+                  </figure>
+                </a>
+                <h3>Buque Mix de Flores Desconstruído</h3>
+              </div>
+              <div>
+                <span class="obs"
+                  >Um Buque Especial, Elegante e Cheio de Vida para o grande
+                  dia!<br />
+
+                  Esse(...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <span>a partir de</span>
+                  R$ 480,00
+                </div>
+                <a
+                  href="/produto/532590/buque-mix-de-flores-desconstruido/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="531619" />
+
+                <a
+                  href="/produto/531619/agrupado-mon-amour/"
+                  title="Agrupado Mon Amour"
+                >
+                  <figure>
+                    <img
+                      alt="Agrupado Mon Amour"
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/871723-3.jpeg"
+                    />
+                  </figure>
+                </a>
+                <h3>Agrupado Mon Amour</h3>
+              </div>
+              <div>
+                <span class="obs">
+                  <br />Agrupado com 12 rosas vermelhas e ruscus com laço.<br />(...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <span>a partir de</span>
+                  R$ 150,00
+                </div>
+                <a
+                  href="/produto/531619/agrupado-mon-amour/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="print-separador"></div>
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="511766" />
+
+                <a
+                  href="/produto/511766/agrupado-qprimaveraq/"
+                  title="Agrupado "
+                  primavera
+                >
+                  <figure>
+                    <img
+                      alt="Agrupado "
+                      primavera
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/838997-3.jpeg"
+                    />
+                  </figure>
+                </a>
+                <h3>Agrupado "Primavera"</h3>
+              </div>
+              <div>
+                <span class="obs"
+                  >Dê boas-vindas à Primavera florindo a sua casa,
+                  escritório,(...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <span>a partir de</span>
+                  R$ 140,00
+                </div>
+                <a
+                  href="/produto/511766/agrupado-qprimaveraq/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="503995" />
+
+                <a
+                  href="/produto/503995/combo-qapaixonadoq/"
+                  title="Combo "
+                  apaixonado
+                >
+                  <figure>
+                    <img
+                      alt="Combo "
+                      apaixonado
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/825464-3.jpg"
+                    />
+                  </figure>
+                </a>
+                <h3>Combo "Apaixonado"</h3>
+              </div>
+              <div>
+                <span class="obs"
+                  >Um lindo "Casadinho" Esse combo é um Mix de
+                  Ramalhete(...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <span>a partir de</span>
+                  R$ 160,00
+                </div>
+                <a
+                  href="/produto/503995/combo-qapaixonadoq/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="349240" />
+
+                <a
+                  href="/produto/349240/bac-a-fleurs-girassois-bobbles-personalizada/"
+                  title="Bac à Fleurs Girassóis + Bobbles Personalizada"
+                >
+                  <figure>
+                    <img
+                      alt="Bac à Fleurs Girassóis + Bobbles Personalizada"
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/558950-3.jpeg"
+                    />
+                  </figure>
+                </a>
+                <h3>Bac à Fleurs Girassóis + Bobbles Personalizada</h3>
+              </div>
+              <div>
+                <span class="obs">
+                  Essa é nossa “Bac a Fleurs”. Uma delicada box(...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <span>a partir de</span>
+                  R$ 330,00
+                </div>
+                <a
+                  href="/produto/349240/bac-a-fleurs-girassois-bobbles-personalizada/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="455268" />
+
+                <a
+                  href="/produto/455268/cesta-de-frutas-com-chocolate-e-pelucia/"
+                  title="Cesta de Frutas com Chocolate e Pelúcia"
+                >
+                  <figure>
+                    <img
+                      alt="Cesta de Frutas com Chocolate e Pelúcia"
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/740914-3.png"
+                    />
+                  </figure>
+                </a>
+                <h3>Cesta de Frutas com Chocolate e Pelúcia</h3>
+              </div>
+              <div>
+                <span class="obs"
+                  >Deliciosa cesta para ser degustada em qualquer momento do
+                  dia,(...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <span>a partir de</span>
+                  R$ 185,00
+                </div>
+                <a
+                  href="/produto/455268/cesta-de-frutas-com-chocolate-e-pelucia/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="404528" />
+
+                <a
+                  href="/produto/404528/bac-a-fleurs-com-rosas-lilas/"
+                  title="Bac à Fleurs com Rosas Lilás"
+                >
+                  <figure>
+                    <img
+                      alt="Bac à Fleurs com Rosas Lilás"
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/655192-3.jpeg"
+                    />
+                  </figure>
+                </a>
+                <h3>Bac à Fleurs com Rosas Lilás</h3>
+              </div>
+              <div>
+                <span class="obs"
+                  >Esse é nosso “Bac a Fleurs”.<br />
+
+                  Uma delicada(...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <span>a partir de</span>
+                  R$ 330,00
+                </div>
+                <a
+                  href="/produto/404528/bac-a-fleurs-com-rosas-lilas/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="334988" />
+
+                <a
+                  href="/produto/334988/bac-tesouro-vermelha/"
+                  title="Bac Tesouro - Vermelha"
+                >
+                  <figure>
+                    <img
+                      alt="Bac Tesouro - Vermelha"
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/533866-3.jpeg"
+                    />
+                  </figure>
+                </a>
+                <h3>Bac Tesouro - Vermelha</h3>
+              </div>
+              <div>
+                <span class="obs"
+                  >Esse presente é desenvolvido exclusivamente para quem
+                  quer(...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <!---<span>por apenas</span>--->
+
+                  R$ 430,00
+                </div>
+                <a
+                  href="/produto/334988/bac-tesouro-vermelha/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="335991" />
+
+                <a
+                  href="/produto/335991/mix-do-florista/"
+                  title="Mix do Florista"
+                >
+                  <figure>
+                    <img
+                      alt="Mix do Florista"
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/535392-3.jpeg"
+                    />
+                  </figure>
+                </a>
+                <h3>Mix do Florista</h3>
+              </div>
+              <div>
+                <span class="obs"
+                  >Esse buque é muito especial, pois deixamos a criação
+                  dele(...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <!---<span>por apenas</span>--->
+
+                  R$ 340,00
+                </div>
+                <a
+                  href="/produto/335991/mix-do-florista/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="329165" />
+
+                <a href="/produto/329165/cesta-love/" title="Cesta Love">
+                  <figure>
+                    <img
+                      alt="Cesta Love"
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/524623-3.jpeg"
+                    />
+                  </figure>
+                </a>
+                <h3>Cesta Love</h3>
+              </div>
+              <div>
+                <span class="obs"
+                  >Uma linda cesta contendo Pães, Torradas, frios, Frutas,
+                  Biscoitos(...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <!---<span>por apenas</span>--->
+
+                  R$ 320,00
+                </div>
+                <a
+                  href="/produto/329165/cesta-love/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="332919" />
+
+                <a
+                  href="/produto/332919/buque-tradicional-de-13-rosas-vermelhas/"
+                  title="Buque Tradicional de 13 rosas Vermelhas"
+                >
+                  <figure>
+                    <img
+                      alt="Buque Tradicional de 13 rosas Vermelhas"
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/530539-3.jpg"
+                    />
+                  </figure>
+                </a>
+                <h3>Buque Tradicional de 13 rosas Vermelhas</h3>
+              </div>
+              <div>
+                <span class="obs"
+                  >Oferecer Rosas vermelhas evidencia a sua admiração por
+                  alguém. (...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <span>a partir de</span>
+                  R$ 250,00
+                </div>
+                <a
+                  href="/produto/332919/buque-tradicional-de-13-rosas-vermelhas/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="print-separador"></div>
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="455270" />
+
+                <a
+                  href="/produto/455270/cesta-sabor-do-amor/"
+                  title="Cesta Sabor do Amor"
+                >
+                  <figure>
+                    <img
+                      alt="Cesta Sabor do Amor"
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/740916-3.png"
+                    />
+                  </figure>
+                </a>
+                <h3>Cesta Sabor do Amor</h3>
+              </div>
+              <div>
+                <span class="obs"
+                  >Cesta Magnifica, feita com a melhor combinação
+                  possível,(...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <span>a partir de</span>
+                  R$ 290,00
+                </div>
+                <a
+                  href="/produto/455270/cesta-sabor-do-amor/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="335954" />
+
+                <a
+                  href="/produto/335954/bac-doce-coracao/"
+                  title="Bac Doce Coração"
+                >
+                  <figure>
+                    <img
+                      alt="Bac Doce Coração"
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/535330-3.jpeg"
+                    />
+                  </figure>
+                </a>
+                <h3>Bac Doce Coração</h3>
+              </div>
+              <div>
+                <span class="obs"
+                  >Esse presente é uma ótima para voce que quer tocar o
+                  coração(...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <span>a partir de</span>
+                  R$ 490,00
+                </div>
+                <a
+                  href="/produto/335954/bac-doce-coracao/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="335971" />
+
+                <a
+                  href="/produto/335971/ramalhete-auge-cor-branco/"
+                  title="Ramalhete Auge - Cor branco."
+                >
+                  <figure>
+                    <img
+                      alt="Ramalhete Auge - Cor branco."
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/535366-3.jpeg"
+                    />
+                  </figure>
+                </a>
+                <h3>Ramalhete Auge - Cor branco.</h3>
+              </div>
+              <div>
+                <span class="obs"
+                  >Ramalhete de flores inspirado em criações Italiana,
+                  composto(...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <!---<span>por apenas</span>--->
+
+                  R$ 280,00
+                </div>
+                <a
+                  href="/produto/335971/ramalhete-auge-cor-branco/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="316003" />
+
+                <a href="/produto/316003/cesta-tasty/" title="Cesta Tasty">
+                  <figure>
+                    <img
+                      alt="Cesta Tasty"
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/2059920-3.jpg"
+                    />
+                  </figure>
+                </a>
+                <h3>Cesta Tasty</h3>
+              </div>
+              <div>
+                <span class="obs"
+                  >Uma linda cesta contendo pães, torrada, frios, frutas,
+                  buscoito(...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <!---<span>por apenas</span>--->
+
+                  R$ 190,00
+                </div>
+                <a
+                  href="/produto/316003/cesta-tasty/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="455271" />
+
+                <a
+                  href="/produto/455271/cesta-de-chocolates-com-frutas/"
+                  title="Cesta de Chocolates com Frutas"
+                >
+                  <figure>
+                    <img
+                      alt="Cesta de Chocolates com Frutas"
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/740918-3.png"
+                    />
+                  </figure>
+                </a>
+                <h3>Cesta de Chocolates com Frutas</h3>
+              </div>
+              <div>
+                <span class="obs"
+                  >Cesta grande com frutas e chocolates para surpreender e
+                  demonstrar(...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <span>a partir de</span>
+                  R$ 190,00
+                </div>
+                <a
+                  href="/produto/455271/cesta-de-chocolates-com-frutas/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="335964" />
+
+                <a
+                  href="/produto/335964/buque-especial-candy-20-rosas-acabamento/"
+                  title="Buque Especial Candy 20 Rosas + acabamento."
+                >
+                  <figure>
+                    <img
+                      alt="Buque Especial Candy 20 Rosas + acabamento."
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/535339-3.jpeg"
+                    />
+                  </figure>
+                </a>
+                <h3>Buque Especial Candy 20 Rosas + acabamento.</h3>
+              </div>
+              <div>
+                <span class="obs"
+                  >Esse é um buque tradicional, que de tradicional não tem
+                  nada(...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <!---<span>por apenas</span>--->
+
+                  R$ 490,00
+                </div>
+                <a
+                  href="/produto/335964/buque-especial-candy-20-rosas-acabamento/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="335987" />
+
+                <a
+                  href="/produto/335987/cadinho-de-rosas-importadas/"
+                  title="Cadinho de Rosas Importadas."
+                >
+                  <figure>
+                    <img
+                      alt="Cadinho de Rosas Importadas."
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/535377-3.jpeg"
+                    />
+                  </figure>
+                </a>
+                <h3>Cadinho de Rosas Importadas.</h3>
+              </div>
+              <div>
+                <span class="obs"
+                  >A Rosa Freedom® é a variedade na cor vermelha mais
+                  produzida(...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <span>a partir de</span>
+                  R$ 600,00
+                </div>
+                <a
+                  href="/produto/335987/cadinho-de-rosas-importadas/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="335961" />
+
+                <a
+                  href="/produto/335961/agrupado-de-flores-nobres/"
+                  title="Agrupado de Flores Nobres"
+                >
+                  <figure>
+                    <img
+                      alt="Agrupado de Flores Nobres"
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/535336-3.jpeg"
+                    />
+                  </figure>
+                </a>
+                <h3>Agrupado de Flores Nobres</h3>
+              </div>
+              <div>
+                <span class="obs">
+                  <br />
+
+                  Nossos buques têm design único, com cores e
+                  texturas(...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <span>a partir de</span>
+                  R$ 950,00
+                </div>
+                <a
+                  href="/produto/335961/agrupado-de-flores-nobres/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="431016" />
+
+                <a
+                  href="/produto/431016/cesta-de-cerveja/"
+                  title="Cesta de Cerveja"
+                >
+                  <figure>
+                    <img
+                      alt="Cesta de Cerveja"
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/697596-3.jpeg"
+                    />
+                  </figure>
+                </a>
+                <h3>Cesta de Cerveja</h3>
+              </div>
+              <div>
+                <span class="obs"
+                  >Essa é uma otima opção de presente contendo:<br />
+
+                  <br />
+
+                  -(...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <!---<span>por apenas</span>--->
+
+                  R$ 280,00
+                </div>
+                <a
+                  href="/produto/431016/cesta-de-cerveja/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="print-separador"></div>
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="329369" />
+
+                <a
+                  href="/produto/329369/bac-a-fleurs-com-rosas-azul/"
+                  title="Bac à Fleurs com Rosas Azul"
+                >
+                  <figure>
+                    <img
+                      alt="Bac à Fleurs com Rosas Azul"
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/524885-3.jpeg"
+                    />
+                  </figure>
+                </a>
+                <h3>Bac à Fleurs com Rosas Azul</h3>
+              </div>
+              <div>
+                <span class="obs"
+                  >Esse é nosso “Bac a Fleurs”. Uma delicada box(...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <span>a partir de</span>
+                  R$ 255,00
+                </div>
+                <a
+                  href="/produto/329369/bac-a-fleurs-com-rosas-azul/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="431049" />
+
+                <a
+                  href="/produto/431049/bac-a-fleurs-baldinho-com-cervejas-louvada/"
+                  title="Bac a Fleurs + Baldinho com cervejas louvada"
+                >
+                  <figure>
+                    <img
+                      alt="Bac a Fleurs + Baldinho com cervejas louvada"
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/697653-3.jpeg"
+                    />
+                  </figure>
+                </a>
+                <h3>Bac a Fleurs + Baldinho com cervejas louvada</h3>
+              </div>
+              <div>
+                <span class="obs"
+                  >Bac à Fleurs com Rosas Azuis<br />
+
+                  Esse é nosso “Bac(...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <span>a partir de</span>
+                  R$ 310,00
+                </div>
+                <a
+                  href="/produto/431049/bac-a-fleurs-baldinho-com-cervejas-louvada/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="box-produto">
+            <form action="/add-carrinho/" method="post">
+              <div>
+                <input type="hidden" name="tipo" value="add" />
+                <input type="hidden" name="id_produto" value="431027" />
+
+                <a href="/produto/431027/cesta-bless/" title="Cesta Bless">
+                  <figure>
+                    <img
+                      alt="Cesta Bless"
+                      loading="lazy"
+                      src="https://cdn.meucatalogodigital.com/belaflor/2334610-3.jpg"
+                    />
+                  </figure>
+                </a>
+                <h3>Cesta Bless</h3>
+              </div>
+              <div>
+                <span class="obs"
+                  >Um belíssimo Baú contendo Pães (sal e Doce), Pão de
+                  queijo,(...)</span
+                >
+              </div>
+              <div>
+                <div class="valor">
+                  <span>a partir de</span>
+                  R$ 585,00
+                </div>
+                <a
+                  href="/produto/431027/cesta-bless/"
+                  title="Comprar"
+                  class="btn btn-color"
+                  >Comprar</a
+                >
+              </div>
+            </form>
+          </div>
+          <div class="print-separador"></div>
+        </div>
+      </div>
+    </div>
+    <footer id="rodape">
+      <div class="container">
+        <p style="color: black;">
+          Floricultura Teresinha - Flores e Decorações <br />
+          Av. Alfredo Bandeira de Melo, 1 - Ana de Albuquerque, Igarassu - PE, 53630-030
+        </p>
+      </div>
+    </footer>
+
+    <!-- WHATSAPP FLUTUANTE -->
+    <div class="whats">
+      <a
+        href="https://wa.me/5581998636465?text= Olá, Dona Terezinha! Tudo bem?"
+        target="_blank"
+      >
+        <img
+          id="logo-wpp-flutuante"
+          src="fotos/icones/wpp-ico.png"
+          alt="Fale Conosco pelo Whatsapp"
+          title="Fale Conosco pelo Whatsapp"
+        />
+      </a>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="js/carrossel.js"></script>
+    <script src="js/mobile-navbar.js"></script>
+    <script src="js/tema.js"></script>
+  </body>
+  <footer></footer>
 </html>
