@@ -1,0 +1,24 @@
+/* FOOTER */
+.rodape {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 400;
+  text-align: center;
+  color: #fff;
+  line-height: 1.4em;
+  width: 100%;
+}
+.rodape p
+{
+  color: white;
+  width: 100%;
+  background-color: #f37f75;
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+
+}
+.rodape a
+{
+}

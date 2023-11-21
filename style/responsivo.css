@@ -1,0 +1,57 @@
+W/* MEDIA  */
+@media screen and (min-width: 1200px) {
+}
+
+/* MEDIA  */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .logo img {
+    width: 50vw;
+    transition: all 0.8s ease;
+  }
+  .carrossel-container img {
+    margin-top: 15vw;
+    border-radius: 2vw;
+    width: 650px;
+    height: 400px;
+  }
+  #prevButton {
+    margin: 20px;
+    /* padding: 20px; */
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    margin-top: 9vw;
+  }
+  #nextButton {
+    margin: 20px;
+    /* padding: 20px; */
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    margin-top: 9vw;
+    border-radius: 50%;
+  }
+}
+
+/* MEDIA  */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .carrossel-container img {
+    margin-top: 15vw;
+    border-radius: 2vw;
+    width: 500px;
+    height: 300px;
+    transition: box-shadow 1s ease-in-out;
+  }
+}
+
+/* MEDIA  */
+@media screen and (max-width: 767px) {
+  .carrossel-container img {
+    margin-top: 15vw;
+    border-radius: 2vw;
+    width: 400px;
+    height: 300px;
+    transition: box-shadow 1s ease-in-out;
+  }
+}

@@ -20,115 +20,8 @@
   src: url(assets/fonte/BenguiatStd-Book.otf);
 }
 @font-face {
-font-family: Poppins;
+  font-family: Poppins;
   src: url(/fonte/Poppins-Regular.ttf);
-}
-
-/* HEADER */
-
-/* Logo Floricultura Teresinha */
-.logo {
-  font-family: Poppins;
-  color: #043f15;
-  text-decoration: none;
-  font-size: 24px;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-}
-.logo img {
-  margin-top: 2px;
-  width: 25vw;
-}
-
-/* Links do menu */
-a {
-  color: rgb(0, 0, 0);
-  text-decoration: none;
-  transition: 0.3s;
-  font-weight: 500;
-  background-color: transparent;
-}
-
-a:hover {
-  opacity: 0.7;
-}
-
-/* Menu de navegação */
-nav {
-  position: fixed;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-family: Poppins;
-  height: 8vh;
-  padding: 2vh 2vh;
-  background-color: #ffffff;
-  margin-bottom: 10vh;
-}
-
-
-.mobile-menu {
-  display: block;
-  cursor: pointer;
-}
-
-.mobile-menu div {
-  width: 20px;
-  height: 3px;
-  margin: 4px;
-  background-color: rgb(0, 0, 0);
-  border-radius: 15px;
-  border: solid 0.5px rgb(0, 0, 0);
-  transition: 0.3s;
-}
-
-.nav-list.active {
-  transform: translateX(0);
-}
-.nav-list a {
-  color: rgb(0, 0, 0);
-}
-.nav-list {
-  position: fixed;
-  color: white;
-  top: 8vh;
-  left: 0px;
-  font-size: 20px;
-  font-weight: bold;
-  gap: 50px;
-  width: 20%;
-  height: 100%;
-  background: rgba(247, 173, 175, 0.95);
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  transform: translateX(-100%);
-  transition: transform 0.3s ease-in;
-}
-
-.nav-list li {
-  opacity: 1;
-  margin-top: 50px;
-  margin-left: 20px;
-  background-color: rgba(247, 173, 175, 0.95);
-}
-
-
-/* SOBRE, CATALOGO E  CONTATO */
-.nav-list {
-  list-style: none;
-  display: flex;
-  color: black;
-}
-
-.nav-list li {
-  letter-spacing: 3px;
-  margin-right: 32px;
-}
-
-nav a img {
-  width: 30px;
 }
 
 /* BODY */
@@ -145,6 +38,25 @@ body {
 }
 
 /* CARROSEL */
+
+#prevButton {
+  margin: 20px;
+  padding: 20px;
+  font-size: 20px;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  margin-top: 9vw;
+}
+#nextButton {
+  margin: 20px;
+  padding: 20px;
+  font-size: 20px;
+  background-color: transparent;
+  border: none;
+  margin-top: 9vw;
+  border-radius: 50%;
+}
 .carrossel-container {
   width: 100%;
   overflow: hidden;
@@ -159,9 +71,10 @@ body {
 .carrossel-container img {
   margin-top: 8vw;
   border-radius: 2vw;
-  width: 1200px;
+  width: 1000px;
   height: 500px;
   transition: box-shadow 1s ease-in-out;
+  
 }
 
 .carrosel-cainter image-hovered {
@@ -184,13 +97,6 @@ body {
   flex-wrap: wrap;
   margin: 0 -7px;
 }
-/* .listagem-produtos .box-produto {
-  width: calc(33.333333333% - 14px);
-  padding-bottom: 14px;
-  margin: 0 7px 14px;
-  text-align: center;
-  font-weight: 700;
-} */
 .listagem-produtos .box-produto {
   width: calc(
     20% - 20px
@@ -254,7 +160,7 @@ a:-webkit-any-link {
   height: 50px;
   right: 24px;
   bottom: 24px;
-  background-color: white;
+  background-color: #53d368;
   text-align: center;
   display: flex;
   align-items: center;
@@ -276,6 +182,7 @@ button {
 
 .listagem-produtos .box-produto button:not([type="button"]),
 .listagem-produtos .box-produto .btn {
+  text-decoration: none;
   width: 90px;
   height: 34px;
   background-color: #aab746;
@@ -291,27 +198,7 @@ button {
   display: inline-block;
 }
 .btn-color {
-  background-color: #f37f75 !important;
-}
-
-/* FOOTER */
-#rodape {
-  font-size: 12px;
-  text-align: center;
-  padding-top: 15px;
-  background-color: #f7adaf;
-  color: #fff;
-  line-height: 1.4em;
-  margin-top: 50px;
-  width: 100%;
-}
-.container {
-  width: 100%;
-  padding: 0 22px;
-  flex-grow: 1;
-}
-#rodape p {
-  margin-top: 0;
+  background-color: #b82012 !important;
 }
 
 form {
