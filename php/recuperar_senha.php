@@ -8,7 +8,7 @@ $dados = filter_input_array(INPUT_POST,FILTER_DEFAULT);
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
-require 'lib/vendor/autoload.php';
+require '../vendor/autoload.php';
 $mail = new PHPMailer(true);
 ?>
 <!DOCTYPE html>
@@ -79,46 +79,49 @@ $mail = new PHPMailer(true);
 
 
             if($result_up_email->execute()){
-              // echo "http://localhost/Floricultura/atualizar_senha.php?chave=" . $chave_recuperar_senha;
+              $link = "http://localhost/Floricultura/php/atualizar_senha.php?chave=" . $chave_recuperar_senha;
               try {
-                 //Server settings
-                  $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      
+                  // $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+                  $mail->CharSet = 'UTF-8';                     
                   $mail->isSMTP();                                            
                   $mail->Host       = 'smtp.gmail.com';                    
                   $mail->SMTPAuth   = true;                                   
-                  $mail->Username   = 'floriculturateresinha@gmail.com';                   
+                  $mail->Username   = 'floriculturateresinha@gmail.com';  
+                  //alterar senha de acesso ao e-mail do seu dispositivo                 
                   $mail->Password   = '';                               
-                  $mail->SMTPSecure = 'tls';            
+                  $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;;            
                   $mail->Port = 587;
 
-                  //Configurações do e-mail
-                  $mail->setFrom('floriculturateresinha@gmail.com', 'Floricultura Teresinha');
+                  $mail->setFrom('floriculturateresinha@gmail.com', 'Atendimento');
                   $mail->addAddress($row_email['email'], $row_email['nome']);
-                  $mail->isHTML(true);
-  
-                  // Corpo do e-mail
-                  $mail->Subject = 'Recuperação de Senha - Floricultura Teresinha';
-                  $mail->Body    = "Clique no link para recuperar sua senha: http://localhost/Floricultura/atualizar_senha.php?chave={$chave_recuperar_senha}";
-  
+
+                  $mail->isHTML(true);                                  
+                  $mail->Subject = 'Recuperar senha';
+                  $mail->Body    = 'Prezado, ' . $row_email['nome'] . ".<br><br> Você solicitou alteração da senha. <br> Para continuar o processo de recuperação de sua senha, clique no link abaixo: <br><br> <a href='" . $link . "'>Clique aqui</a> <br><br> Se você não solicitou essa alteração, nenhuma ação é necessária. Sua senha permanecerá a mesma até que você ative este código. <br><br>";
+                  $mail->AltBody = 'Prezado ' . $row_email['nome'] . " \n\n Você solicitou alteração da senha. \nPara continuar o processo de recuperação de sua senha, clique no link abaixo: \n\n " . $link . " \n\n Se você não solicitou essa alteração, nenhuma ação é necessária. Sua senha permanecerá a mesma até que você ative este código. \n\n" ;
+   
                   $mail->send();
+
+                  $_SESSION['msg'] = "<p style='font-size: 25px; color: green;'>Enviado e-mail com instruções para recuperar a senha. Acesse a sua caixa de e-mail para recuperar a senha!</p>";
+                  header("Location: ../index.html");
                 }
               catch (Exception $e) {
                 echo "Erro: E-mail não enviado com sucesso. Mailer Error: {$mail->ErrorInfo}";
               }
             }
             else{
-              $_SESSION['msg'] = "<p style='font-size: 25px; color: #ff0001'>Tente novamente!</p>";
+              echo "<p style='font-size: 25px; color: #ff0001'>Tente novamente!</p>";
             }
           
           }
           else{
-              $_SESSION['msg'] = "<p style='font-size: 25px; color: #ff0001'>Erro: E-mail não cadastrado!</p>";
+            echo "<p style='font-size: 25px; color: #ff0001'>Erro: E-mail não cadastrado!</p>";
           }
       }
 
-    if(isset($_SESSION['msg'])){
-        echo $_SESSION['msg'];
-        unset($_SESSION['msg']);
+    if(isset($_SESSION['msg_recup'])){
+        echo $_SESSION['msg_recup'];
+        unset($_SESSION['msg_recup']);
       }
     
     ?>

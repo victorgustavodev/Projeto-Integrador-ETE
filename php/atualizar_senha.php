@@ -76,7 +76,7 @@ $dados = filter_input_array(INPUT_POST,FILTER_DEFAULT);
 
                           if($result_up_email->execute()){
                             $_SESSION['msg'] = "<p style='font-size: 25px; color: green;'>Senha atualizada com sucesso!</p>";
-                            header("Location: index.php");
+                            header("Location: ../index.html");
                           }
                           else{
                             echo "<p style='font-size: 25px; color: #ff0001'>Tente novamente!</p>";
@@ -84,12 +84,12 @@ $dados = filter_input_array(INPUT_POST,FILTER_DEFAULT);
 
                         }
                     }else{
-                        $_SESSION['msg'] = "<p style='font-size: 25px; color: #ff0001'>Erro: Link inválido, solicite um novo link para atualizar a senha!</p>";
+                        $_SESSION['v'] = "<p style='font-size: 25px; color: #ff0001'>Erro: Link inválido, solicite um novo link para atualizar a senha!</p>";
                         header("Location: recuperar_senha.php");
                     }
         }else{
-            $_SESSION['msg'] = "<p style='font-size: 25px; color: #ff0001'>Erro: Link inválido, solicite um novo link para atualizar a senha!</p>";
-                        header("Location: esqueceu.php");
+            $_SESSION['msg_recup'] = "<p style='font-size: 25px; color: #ff0001'>Erro: Link inválido, solicite um novo link para atualizar a senha!</p>";
+                        header("Location: recuperar_senha.php");
         }
        
     ?>
