@@ -8,12 +8,6 @@
   box-sizing: border-box;
 }
 
-*,
-::after,
-::before {
-  box-sizing: border-box;
-}
-
 /* Importando Fontes */
 @font-face {
   font-family: Benguia;
@@ -36,27 +30,47 @@ body {
   line-height: 1.2em;
   background-color: #ffffff;
 }
+/* SHOPPING */
+
+
+.shopping i
+{
+  font-size: 30px;
+  color: #f37f75;
+  cursor: pointer;
+}
+
+.shopping span {
+  font-size: 15px;
+  background-color: black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  color: white;
+  position: -5px;
+  top: 43px;
+  right: 27px;
+  padding: 4px 7px;
+}
+
 
 /* CARROSEL */
 
-#prevButton {
-  margin: 20px;
+#prevButton,#nextButton {
+  font-size: 20px;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  margin-top: 6vw;
   padding: 20px;
   font-size: 20px;
   background-color: transparent;
   border: none;
   border-radius: 50%;
-  margin-top: 9vw;
 }
-#nextButton {
-  margin: 20px;
-  padding: 20px;
-  font-size: 20px;
-  background-color: transparent;
-  border: none;
-  margin-top: 9vw;
-  border-radius: 50%;
-}
+
 .carrossel-container {
   width: 100%;
   overflow: hidden;
@@ -87,11 +101,6 @@ body {
   flex-wrap: wrap;
   align-items: start;
 }
-*,
-::after,
-::before {
-  box-sizing: border-box;
-}
 .listagem-produtos {
   display: flex;
   flex-wrap: wrap;
@@ -105,6 +114,14 @@ body {
   margin: 10px;
   text-align: center;
   font-weight: 700;
+}
+/* ALINHAMENTO DOS BOTOES DE COMPRAR */
+
+form {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .listagem-produtos .box-produto figure img {
@@ -201,9 +218,3 @@ button {
   background-color: #b82012 !important;
 }
 
-form {
-  display: flex;
-  flex-flow: column;
-  justify-content: space-between;
-  height: 100%;
-}

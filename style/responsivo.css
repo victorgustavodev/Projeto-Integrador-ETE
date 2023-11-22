@@ -1,4 +1,5 @@
-W/* MEDIA  */
+/* MEDIA  */
+
 @media screen and (min-width: 1200px) {
 }
 
@@ -14,25 +15,17 @@ W/* MEDIA  */
     width: 650px;
     height: 400px;
   }
-  #prevButton {
+  #prevButton, #nextButton {
     margin: 20px;
     /* padding: 20px; */
     font-size: 20px;
     background-color: transparent;
     border: none;
     border-radius: 50%;
-    margin-top: 9vw;
-  }
-  #nextButton {
-    margin: 20px;
-    /* padding: 20px; */
-    font-size: 20px;
-    background-color: transparent;
-    border: none;
-    margin-top: 9vw;
-    border-radius: 50%;
-  }
+    margin-top: 9vw;}
+
 }
+
 
 /* MEDIA  */
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -54,4 +47,46 @@ W/* MEDIA  */
     height: 300px;
     transition: box-shadow 1s ease-in-out;
   }
+}
+
+@media screen and (max-width: 400px){
+  .carrossel-container img {
+    margin-top: 15vw;
+    border-radius: 2vw;
+    width: 250px;
+    height: 150px;
+    transition: box-shadow 1s ease-in-out;
+  }
+
+  #prevButton, #nextButton {
+    margin: 20px;
+    display: none;
+    /* padding: 20px; */
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    margin-top: 9vw;
+  }
+  .shopping i
+    {
+      font-size: 25px;
+      color: #f37f75;
+      cursor: pointer;
+    }
+    
+    .shopping span {
+      font-size: 10px;
+      background-color: black;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      color: white;
+      position: -5px;
+      top: 38px;
+      right: 25px;
+      padding: 4px 7px;
+    }
 }
