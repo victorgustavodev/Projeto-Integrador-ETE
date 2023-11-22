@@ -13,9 +13,16 @@
   font-family: Benguia;
   src: url(assets/fonte/BenguiatStd-Book.otf);
 }
+
 @font-face {
   font-family: Poppins;
   src: url(/fonte/Poppins-Regular.ttf);
+}
+
+.logo img {
+  padding-top: 20px;
+  width: 40vw;
+  transition: all 0.8s ease;
 }
 
 /* BODY */
@@ -30,11 +37,20 @@ body {
   line-height: 1.2em;
   background-color: #ffffff;
 }
+
+/* ICONE USUARIO */
+
+.user i {
+  margin-bottom: 10px;
+  font-size: 25px;
+  color: #f37f75;
+  cursor: pointer;
+}
+
+
 /* SHOPPING */
 
-
-.shopping i
-{
+.shopping i {
   font-size: 30px;
   color: #f37f75;
   cursor: pointer;
@@ -50,15 +66,16 @@ body {
   position: absolute;
   color: white;
   position: -5px;
-  top: 43px;
-  right: 27px;
+  top: 37px;
+  right: 25px;
   padding: 4px 7px;
 }
 
 
 /* CARROSEL */
 
-#prevButton,#nextButton {
+#prevButton,
+#nextButton {
   font-size: 20px;
   background-color: transparent;
   border: none;
@@ -78,6 +95,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .carrosel-slide {
   display: none;
 }
@@ -88,7 +106,7 @@ body {
   width: 1000px;
   height: 500px;
   transition: box-shadow 1s ease-in-out;
-  
+
 }
 
 .carrosel-cainter image-hovered {
@@ -101,20 +119,21 @@ body {
   flex-wrap: wrap;
   align-items: start;
 }
+
 .listagem-produtos {
   display: flex;
   flex-wrap: wrap;
   margin: 0 -7px;
 }
+
 .listagem-produtos .box-produto {
-  width: calc(
-    20% - 20px
-  ); /* Adjusted width for five items, with margin and padding */
+  width: 350px;
   padding: 10px;
   margin: 10px;
   text-align: center;
   font-weight: 700;
 }
+
 /* ALINHAMENTO DOS BOTOES DE COMPRAR */
 
 form {
@@ -125,17 +144,17 @@ form {
 }
 
 .listagem-produtos .box-produto figure img {
-  min-width: 241px;
-  min-height: 241px;
-  max-width: 241px;
-  max-height: 241px;
+  max-width: 200px;
+  max-height: 200px;
   object-fit: contain;
 }
+
 .listagem-produtos .box-produto h3 {
   font-size: 12px;
   margin: 10px 0;
   color: var(--primary-color);
 }
+
 .listagem-produtos .box-produto .obs {
   font-size: 13px;
   font-weight: 400;
@@ -143,6 +162,7 @@ form {
   margin-bottom: 12px;
   word-wrap: break-word;
 }
+
 .listagem-produtos .box-produto .valor {
   font-size: 15px;
   color: var(--primary-color);
@@ -169,32 +189,10 @@ a:-webkit-any-link {
   cursor: pointer;
 }
 
-/* WHATSAPP FLUTUANTE */
-
-.whats {
-  position: fixed;
-  width: 50px;
-  height: 50px;
-  right: 24px;
-  bottom: 24px;
-  background-color: #53d368;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  border-radius: 50px;
-  z-index: 2;
-}
-
-#logo-wpp-flutuante {
-  fill: #ffffff;
-  width: 70%;
-  margin-bottom: -2px;
-}
-
-/* Definindo Padrão nos Botões */
 button {
   cursor: pointer;
 }
+
 /* BOTÃO DE COMPRAR */
 
 .listagem-produtos .box-produto button:not([type="button"]),
@@ -214,7 +212,7 @@ button {
   line-height: 18px;
   display: inline-block;
 }
+
 .btn-color {
   background-color: #b82012 !important;
 }
-
