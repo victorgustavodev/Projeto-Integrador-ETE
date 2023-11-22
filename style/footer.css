@@ -10,8 +10,8 @@
   line-height: 1.4em;
   width: 100%;
 }
-.rodape p
-{
+
+.rodape p {
   color: white;
   width: 100%;
   background-color: #f37f75;
@@ -19,6 +19,25 @@
   padding-bottom: 2vw;
 
 }
-.rodape a
-{
+
+/* WHATSAPP FLUTUANTE */
+
+.whats {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  right: 24px;
+  bottom: 24px;
+  background-color: #53d368;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+  z-index: 999;
+}
+
+#logo-wpp-flutuante {
+  fill: #ffffff;
+  width: 70%;
+  margin-bottom: -2px;
 }
