@@ -38,40 +38,6 @@ body {
   background-color: #ffffff;
 }
 
-/* ICONE USUARIO */
-
-.user i {
-  margin-bottom: 10px;
-  font-size: 25px;
-  color: #f37f75;
-  cursor: pointer;
-}
-
-
-/* SHOPPING */
-
-.shopping i {
-  font-size: 30px;
-  color: #f37f75;
-  cursor: pointer;
-}
-
-.shopping span {
-  font-size: 15px;
-  background-color: black;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  color: white;
-  position: -5px;
-  top: 37px;
-  right: 25px;
-  padding: 4px 7px;
-}
-
-
 /* CARROSEL */
 
 #prevButton,
@@ -113,6 +79,8 @@ body {
   box-shadow: 0 0 10px rgba(255, 3, 3, 0.925);
 }
 
+/* CATALOGO */
+
 .box-flex {
   height: 100%;
   display: flex;
@@ -123,6 +91,8 @@ body {
 .listagem-produtos {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   margin: 0 -7px;
 }
 
@@ -134,8 +104,6 @@ body {
   font-weight: 700;
 }
 
-/* ALINHAMENTO DOS BOTOES DE COMPRAR */
-
 form {
   display: flex;
   flex-flow: column;
@@ -144,8 +112,8 @@ form {
 }
 
 .listagem-produtos .box-produto figure img {
-  max-width: 200px;
-  max-height: 200px;
+width: 200px;
+height: 200px;
   object-fit: contain;
 }
 
@@ -216,3 +184,6 @@ button {
 .btn-color {
   background-color: #b82012 !important;
 }
+
+/* --------login-------- */
+

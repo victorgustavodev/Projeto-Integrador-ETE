@@ -12,7 +12,7 @@
 
 .logo img {
   margin-top: 2px;
-  width: 25vw;
+  width: 30vw;
 }
 
 /* Menu de navegação */
@@ -27,62 +27,41 @@ nav {
   height: 8vh;
   padding: 5vh 2vh;
   background-color: #ffffff;
-  margin-bottom: 10vh;
-
 }
 
 
-.mobile-menu {
-  display: block;
+/* ICONE USUARIO */
+
+.user i {
+  margin-bottom: 10px;
+  font-size: 25px;
+  color: #f37f75;
   cursor: pointer;
 }
 
-.mobile-menu div {
-  width: 20px;
-  height: 3px;
-  margin: 4px;
-  background-color: #f37f75;
-  border-radius: 15px;
-  border: solid 0.5px #f37f75;
-  transition: 0.3s;
+
+/* ICONE SHOPPING */
+
+.shopping i {
+  font-size: 30px;
+  color: #f37f75;
+  cursor: pointer;
 }
 
-.nav-list.active {
-  transform: translateX(0);
-}
-
-.nav-list a {
-  color: rgb(0, 0, 0);
-}
-
-.nav-list {
-  list-style: none;
-  position: fixed;
+.shopping span {
+  font-size: 15px;
+  background-color: black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
   color: white;
-  top: 8vh;
-  left: 0px;
-  font-size: 20px;
-  font-weight: bold;
-  gap: 50px;
-  width: 14%;
-  height: 100%;
-  background: rgba(247, 173, 175, 0.95);
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  transform: translateX(-100%);
-  transition: transform 0.3s ease-in;
+  position: -5px;
+  top: 37px;
+  right: 25px;
+  padding: 4px 7px;
 }
-
-.nav-list li {
-  opacity: 1;
-  margin-top: 50px;
-  margin-left: 20px;
-  letter-spacing: 3px;
-  margin-right: 32px;
-  background-color: rgba(247, 173, 175, 0.95);
-}
-
 nav a {
   color: rgb(0, 0, 0);
   text-decoration: none;
@@ -99,10 +78,3 @@ nav a:hover {
   font-size: 70px;
   color: black;
 }
-
-div a i {
-  color: #f37f75;
-  font-size: 25px;
-}
-
-/* Links do menu */
