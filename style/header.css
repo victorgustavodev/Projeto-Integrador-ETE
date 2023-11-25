@@ -29,7 +29,6 @@ nav {
   background-color: #ffffff;
 }
 
-
 /* ICONE USUARIO */
 
 .user i {
@@ -39,8 +38,11 @@ nav {
   cursor: pointer;
 }
 
-
 /* ICONE SHOPPING */
+
+.shopping {
+  position: relative;
+}
 
 .shopping i {
   font-size: 30px;
@@ -49,18 +51,18 @@ nav {
 }
 
 .shopping span {
-  font-size: 15px;
+  position: absolute;
+  top: 15px;
+  left: -5px;
+  width: 15px;
+  height: auto;
+  font-size: 10px;
   background-color: black;
   border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
   color: white;
-  position: -5px;
-  top: 37px;
-  right: 25px;
-  padding: 4px 7px;
+  text-align: center;
+  margin: 0 auto;
+  visibility: hidden;
 }
 
 nav a:hover {
