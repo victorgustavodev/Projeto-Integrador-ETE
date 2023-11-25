@@ -62,19 +62,7 @@ nav {
   right: 25px;
   padding: 4px 7px;
 }
-nav a {
-  color: rgb(0, 0, 0);
-  text-decoration: none;
-  transition: 0.3s;
-  font-weight: 500;
-  background-color: transparent;
-}
 
 nav a:hover {
   opacity: 0.7;
-}
-
-.nav-icons {
-  font-size: 70px;
-  color: black;
 }
