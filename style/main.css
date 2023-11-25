@@ -72,7 +72,6 @@ body {
   width: 1000px;
   height: 500px;
   transition: box-shadow 1s ease-in-out;
-
 }
 
 .carrosel-cainter image-hovered {
@@ -112,8 +111,8 @@ form {
 }
 
 .listagem-produtos .box-produto figure img {
-width: 200px;
-height: 200px;
+  width: 200px;
+  height: 200px;
   object-fit: contain;
 }
 
@@ -187,3 +186,16 @@ button {
 
 /* --------login-------- */
 
+/* --------Carrinho de Compras-------- */
+
+.container-cart {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  height: 90%;
+  width: 0px;
+  background-color: #edc0bc;
+  border-radius: 5px 0 0 5px;
+  transition: width 0.5s ease-out;
+}
