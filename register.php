@@ -42,7 +42,13 @@ session_start();
       <div class="container">
         <div class="box-login">
           <div class="login">
+                   <?php 
+            // if(isset($_SESSION['msg']))
+            // echo $_SESSION['msg'];
+            // unset($_SESSION['msg']);
+            ?> 
             <h1>Registre-se</h1>
+<<<<<<< Updated upstream
             <?php 
             if(isset($_SESSION['msg']))
             echo $_SESSION['msg'];
@@ -74,8 +80,25 @@ session_start();
             <input type="password" name="senha_usuario" id="" required />
           </div>
           <button type = "submit" class="button-login">REGISTRAR</button>
+=======
+            <form method="post" action="php/cadastro.php">
+            <div class="login">
+              <p>Nome<span style="color: red; font-size: 10px; margin: 3px">*</span></p>
+              <input type="text" name="nome" required />
+            </div>
+            <div class="login">
+              <p>E-mail<span style="color: red; font-size: 10px; margin: 3px">*</span></p>
+              <input type="email" name="email" required />
+            </div>
+            <div class="senha">
+              <p>Senha<span style="color: red; font-size: 10px; margin: 3px">*</span></p>
+              <input type="password" name="senha" required />
+            </div>
+            <button type="submit" class="button-login">REGISTRAR</button>
+          </form>
+>>>>>>> Stashed changes
           <div class="perdeu-senha">
-            <a class="kkk" href="login.html">Já possui uma conta?</a>
+            <a class="kkk" href="login.php">Já possui uma conta?</a>
           </div>
         </div>
       </div>
