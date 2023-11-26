@@ -4,20 +4,9 @@
   margin: 0;
   padding: 0;
   border: 5px;
-  font-family: Poppins;
+  font-family: 'Poppins', sans-serif;
   background-color: transparent;
   box-sizing: border-box;
-}
-
-/* Importando Fontes */
-@font-face {
-  font-family: Benguia;
-  src: url(assets/fonte/BenguiatStd-Book.otf);
-}
-
-@font-face {
-  font-family: Poppins;
-  src: url(/fonte/Poppins-Regular.ttf);
 }
 
 .logo img {
@@ -75,6 +64,13 @@ body {
   transition: box-shadow 1s ease-in-out;
 }
 
+
+.carrosel-slide img 
+{
+  transition: opacity 1s linear;
+  opacity: 0.5;
+}
+
 .carrosel-cainter image-hovered {
   box-shadow: 0 0 10px rgba(255, 3, 3, 0.925);
 }
@@ -94,6 +90,7 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0 -7px;
+  margin-bottom: 70px;
 }
 
 .listagem-produtos .box-produto {
@@ -159,6 +156,9 @@ a:-webkit-any-link {
 
 button {
   cursor: pointer;
+  background: gray;
+  padding: 12px 25px;
+  border-radius: 30px;
 }
 
 /* BOTÃO DE COMPRAR */
@@ -183,6 +183,8 @@ button {
 
 .btn-color {
   background-color: transparent;
+  text-decoration: none;
+
 }
 
 /* --------login-------- */

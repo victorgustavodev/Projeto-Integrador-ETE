@@ -17,7 +17,7 @@ divConteudos.forEach((divConteudo) => {
       const Titulo = TituloProduto.innerHTML;
       const Valor = ValorProduto.innerHTML;
       const url = `https://wa.me/5581998636465?text=${encodeURIComponent(
-        `Olá, Desejo Adquirir o Produto: ${Titulo} no valor de ${Valor}`
+        `Meu Pedido: ${Titulo} no valor de ${Valor}`
       )}`;
 
       window.open(url, "_blank");
