@@ -61,19 +61,29 @@ body {
   border-radius: 2vw;
   width: 1000px;
   height: 500px;
-  transition: box-shadow 1s ease-in-out;
+  animation: sliderimg 1s linear;
 }
 
+@keyframes sliderimg {
+  0% {
+    filter: blur(1px);
+  }
+  20% {
+    filter: blur(0.5px);
+  }
+  70% {
+    filter: blur(0.3px);
+  }
+  100% {
+    filter: blur(0px);
+  }
+}
 
-.carrosel-slide img 
-{
+/* 
+.carrosel-slide img {
   transition: opacity 1s linear;
   opacity: 0.5;
-}
-
-.carrosel-cainter image-hovered {
-  box-shadow: 0 0 10px rgba(255, 3, 3, 0.925);
-}
+} */
 
 /* CATALOGO */
 
