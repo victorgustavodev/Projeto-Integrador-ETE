@@ -106,6 +106,8 @@ body {
 .perdeu-senha {
   display: flex;
   justify-content: space-between;
+  font-size: 15px;
+  font-weight: bold;
 }
 
 .kkk {

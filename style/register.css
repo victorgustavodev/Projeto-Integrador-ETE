@@ -114,3 +114,9 @@ body {
 .kkk:hover {
   text-decoration: dotted;
 }
+
+.perdeu-senha
+{
+  font-size: 15px;
+  font-weight: bold;
+}
