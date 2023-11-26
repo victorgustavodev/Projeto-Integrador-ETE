@@ -1,7 +1,7 @@
 <?php
-// session_start();
+session_start();
 ob_start();
-include_once 'php/conexao.php';
+include_once 'conexao.php';
 $dados = filter_input_array(INPUT_POST,FILTER_DEFAULT);
 //Import PHPMailer classes into the global namespace
 //These must be at the top of your script, not inside a function
@@ -99,7 +99,7 @@ $mail = new PHPMailer(true);
 
 
             if($result_up_email->execute()){
-              $link = "http://localhost/Floricultura/php/atualizar_senha.php?chave=" . $chave_recuperar_senha;
+              $link = "http://localhost/Floricultura/atualizar_senha.php?chave=" . $chave_recuperar_senha;
               try {
                   // $mail->SMTPDebug = SMTP::DEBUG_SERVER;
                   $mail->CharSet = 'UTF-8';                     

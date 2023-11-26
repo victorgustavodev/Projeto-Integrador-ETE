@@ -1,5 +1,5 @@
 <?php
-// session_start();
+session_start();
 ob_start();
 include_once 'conexao.php';
 $dados = filter_input_array(INPUT_POST,FILTER_DEFAULT);
@@ -9,12 +9,12 @@ $dados = filter_input_array(INPUT_POST,FILTER_DEFAULT);
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="../fotos/Rose.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="../style/header.css" id="theme-stylesheet" />
-    <link rel="stylesheet" href="../style/footer.css" id="theme-stylesheet" />
-    <link rel="stylesheet" href="../style/responsivo.css" />
-    <link rel="stylesheet" href="../style/atualizar_senha.css" />
-    <link rel="stylesheet" href="../style/tema.css" />
+    <link rel="shortcut icon" href="fotos/Rose.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style/header.css" id="theme-stylesheet" />
+    <link rel="stylesheet" href="style/footer.css" id="theme-stylesheet" />
+    <link rel="stylesheet" href="style/responsivo.css" />
+    <link rel="stylesheet" href="style/atualizar_senha.css" />
+    <link rel="stylesheet" href="style/tema.css" />
 
     <script
       src="https://kit.fontawesome.com/c8e307d42e.js"
@@ -28,10 +28,10 @@ $dados = filter_input_array(INPUT_POST,FILTER_DEFAULT);
     <header>
       <!-- USER-ICON -->
       <nav>
-        <a class="user" href="../login.php"><i class="fa-solid fa-user"></i></a>
+        <a class="user" href="login.php"><i class="fa-solid fa-user"></i></a>
         <!-- LOGO -->
-        <a class="logo" href="../index.html"
-          ><img src="../fotos/img/logo.png" alt=""
+        <a class="logo" href="index.html"
+          ><img src="fotos/img/logo.png" alt=""
         /></a>
         <!-- TEMA -->
         <label for="theme-toggle" class="theme">
@@ -103,7 +103,7 @@ $dados = filter_input_array(INPUT_POST,FILTER_DEFAULT);
 
                           if($result_up_email->execute()){
                             $_SESSION['msg'] = "<p style='font-size: 15px; color: green;'>Senha atualizada com sucesso!</p>";
-                            header("Location: ../login.php");
+                            header("Location: login.php");
                           }
                           else{
                             echo "<p style='font-size: 15px; color: #ff0001'>Tente novamente!</p>";
@@ -112,11 +112,11 @@ $dados = filter_input_array(INPUT_POST,FILTER_DEFAULT);
                         }
                     }else{
                         $_SESSION['v'] = "<p style='font-size: 15px; color: #ff0001'>Erro: Link inválido, solicite um novo link para atualizar a senha!</p>";
-                        header("Location: ../recuperar_senha.php");
+                        header("Location: recuperar_senha.php");
                     }
         }else{
             $_SESSION['msg_recup'] = "<p style='font-size: 15px; color: #ff0001'>Erro: Link inválido, solicite um novo link para atualizar a senha!</p>";
-                        header("Location: ../recuperar_senha.php");
+                        header("Location: recuperar_senha.php");
         }
        
     ?>
