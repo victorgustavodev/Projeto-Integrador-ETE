@@ -88,7 +88,7 @@ $mail = new PHPMailer(true);
                   $mail->SMTPAuth   = true;                                   
                   $mail->Username   = 'floriculturateresinha@gmail.com';  
                   //alterar senha de acesso ao e-mail do seu dispositivo                 
-                  $mail->Password   = '';                               
+                  $mail->Password   = 'vpma ofco egob yeqn';                               
                   $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;;            
                   $mail->Port = 587;
 
@@ -102,8 +102,8 @@ $mail = new PHPMailer(true);
    
                   $mail->send();
 
-                  $_SESSION['msg'] = "<p style='font-size: 25px; color: green;'>Enviado e-mail com instruções para recuperar a senha. Acesse a sua caixa de e-mail para recuperar a senha!</p>";
-                  header("Location: ../index.html");
+                  $_SESSION['msg'] = "<p style='font-size: 15px; color: green;'>Enviado e-mail com instruções para recuperar a senha. Acesse a sua caixa de e-mail para recuperar a senha!</p>";
+                  header("Location: ../login.php");
                 }
               catch (Exception $e) {
                 echo "Erro: E-mail não enviado com sucesso. Mailer Error: {$mail->ErrorInfo}";

@@ -1,7 +1,7 @@
 <?php
 session_start();
 ob_start();
-include_once 'conexao.php';
+include_once 'php/conexao.php';
 $dados = filter_input_array(INPUT_POST, 
 FILTER_DEFAULT);
 ?>
@@ -11,11 +11,11 @@ FILTER_DEFAULT);
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="../fotos/Rose.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="../style/header.css" id="theme-stylesheet" />
-    <link rel="stylesheet" href="../style/footer.css" id="theme-stylesheet" />
-    <link rel="stylesheet" href="../style/responsivo.css" />
-    <link rel="stylesheet" href="../style/login.css" />
+    <link rel="shortcut icon" href="fotos/Rose.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style/header.css" id="theme-stylesheet" />
+    <link rel="stylesheet" href="style/footer.css" id="theme-stylesheet" />
+    <link rel="stylesheet" href="style/responsivo.css" />
+    <link rel="stylesheet" href="style/login.css" />
     <script
       src="https://kit.fontawesome.com/c8e307d42e.js"
       crossorigin="anonymous"
@@ -30,8 +30,8 @@ FILTER_DEFAULT);
       <nav>
         <a class="user" href="login.php"><i class="fa-solid fa-user"></i></a>
         <!-- LOGO -->
-        <a class="logo" href="../index.html"
-          ><img src="../fotos/img/logo.png" alt=""
+        <a class="logo" href="index.html"
+          ><img src="fotos/img/logo.png" alt=""
         /></a>
         <!-- CARRINHO -->
         <div>
@@ -46,24 +46,27 @@ FILTER_DEFAULT);
       <div class="container">
         <div class="box-login">
           <div class="login">
-    <h1>Entrar</h1>
-    <form method="POST" action="">
-            <p>
-              E-mail<span style="color: red; font-size: 10px; margin: 3px"
-                >*</span
-              >
-            </p>
-            <input type="email" name="email" id="" value="<?php if (isset($dados['email'])) {echo $dados['email'];} ?>" required />
-          </div>
-          <div class="senha">
-            <p>
-              Senha<span style="color: red; font-size: 10px; margin: 3px"
-                >*</span
-              >
-            </p>
-            <input type="password" name="senha_usuario" id="" required value="<?php if (isset($dados['senha_usuario'])) {echo $dados['senha_usuario'];} ?>"/>
 
-        <?php
+     <form method="post" action="">
+      <h1>Entrar</h1>
+              <p>
+                E-mail<span style="color: red; font-size: 10px; margin: 3px"
+                  >*</span
+                >
+              </p>
+              <input type="email" name="email" id="" value="<?php if (isset($dados['email'])) {echo $dados['email'];} ?>" required />
+            </div>
+            <div class="senha">
+              <p>
+                Senha<span style="color: red; font-size: 10px; margin: 3px"
+                  >*</span
+                >
+              </p>
+              <input type="password" name="senha_usuario" id="" required value="<?php if (isset($dados['senha_usuario'])) {echo $dados['senha_usuario'];} ?>"/>
+
+            </div>
+
+            <?php
         if (!empty($dados['SendLogin'])) {
             $query_email = "SELECT id, nome, email, senha_usuario
                     FROM usuarios
@@ -79,7 +82,7 @@ FILTER_DEFAULT);
                 if (password_verify($dados['senha_usuario'], $row_email['senha_usuario'])) {
                     $_SESSION['id'] = $row_email['id'];
                     $_SESSION['nome'] = $row_email['nome'];
-                    header("Location: session.php");
+                    header("Location: php/session.php");
                     exit();
                 } else {
                     $_SESSION['msg'] = "<p style='font-size: 25px; color: #ff0001'>Erro: Usuário ou senha inválida!</p>";
@@ -96,17 +99,14 @@ FILTER_DEFAULT);
 
         ?>
 
-    <button class="button-login" value="Acessar" name="SendLogin" >ACESSAR</button>
+            <button value="Acessar" name="SendLogin" class="button-login">ACESSAR</button>
     </form>
-
-
-    
           <div class="perdeu-senha">
             <label for="">
               <input type="checkbox" />
               Lembre-me
             </label>
-            <a class="kkk" href="recuperar_senha.php">Perdeu a senha?</a>
+            <a class="kkk" href="php/recuperar_senha.php">Perdeu a senha?</a>
           </div>
         </div>
         <div class="box-register">
@@ -114,12 +114,30 @@ FILTER_DEFAULT);
           <p>
             O registro neste site permite que você acesse o status e o histórico do seu pedido. Basta preencher os campos abaixo e configuraremos uma nova conta para você rapidamente. Solicitaremos apenas as informações necessárias para tornar o processo de compra mais rápido e fácil.
           </p>
-          <a href="registro.php"><button class="button-cadastro">CADASTRE-SE</button></a>
+          <a href="php/registro.php"><button class="button-cadastro">CADASTRE-SE</button></a>
         </div>
       </div>
     </div>
+        <!-- WHATSAPP FLUTUANTE -->
+        <div class="whats">
+          <a
+            href="https://wa.me/5581998636465?text= Olá, Dona Terezinha! Tudo bem?"
+            target="_blank"
+            style="background: transparent"
+            ><i
+              class="fa-brands fa-whatsapp"
+              style="
+                color: #ffffff;
+                background-color: transparent;
+                width: 50px;
+                font-size: 30px;
+              "
+            ></i>
+          </a>
+        </div>
   </body>
     <!-- SCRIPTS -->
     <script src="js/carrossel.js"></script>
     <script src="js/cart.js"></script>
 </html>
+
