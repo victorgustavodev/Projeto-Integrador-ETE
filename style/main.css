@@ -38,40 +38,6 @@ body {
   background-color: #ffffff;
 }
 
-/* ICONE USUARIO */
-
-.user i {
-  margin-bottom: 10px;
-  font-size: 25px;
-  color: #f37f75;
-  cursor: pointer;
-}
-
-
-/* SHOPPING */
-
-.shopping i {
-  font-size: 30px;
-  color: #f37f75;
-  cursor: pointer;
-}
-
-.shopping span {
-  font-size: 15px;
-  background-color: black;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  color: white;
-  position: -5px;
-  top: 37px;
-  right: 25px;
-  padding: 4px 7px;
-}
-
-
 /* CARROSEL */
 
 #prevButton,
@@ -106,12 +72,13 @@ body {
   width: 1000px;
   height: 500px;
   transition: box-shadow 1s ease-in-out;
-
 }
 
 .carrosel-cainter image-hovered {
   box-shadow: 0 0 10px rgba(255, 3, 3, 0.925);
 }
+
+/* CATALOGO */
 
 .box-flex {
   height: 100%;
@@ -123,6 +90,8 @@ body {
 .listagem-produtos {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   margin: 0 -7px;
 }
 
@@ -134,8 +103,6 @@ body {
   font-weight: 700;
 }
 
-/* ALINHAMENTO DOS BOTOES DE COMPRAR */
-
 form {
   display: flex;
   flex-flow: column;
@@ -144,8 +111,8 @@ form {
 }
 
 .listagem-produtos .box-produto figure img {
-  max-width: 200px;
-  max-height: 200px;
+  width: 200px;
+  height: 200px;
   object-fit: contain;
 }
 
@@ -215,4 +182,20 @@ button {
 
 .btn-color {
   background-color: #b82012 !important;
+}
+
+/* --------login-------- */
+
+/* --------Carrinho de Compras-------- */
+
+.container-cart {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  height: 90%;
+  width: 0px;
+  background-color: #edc0bc;
+  border-radius: 5px 0 0 5px;
+  transition: width 0.5s ease-out;
 }
