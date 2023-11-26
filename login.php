@@ -106,7 +106,7 @@ FILTER_DEFAULT);
               <input type="checkbox" />
               Lembre-me
             </label>
-            <a class="kkk" href="php/recuperar_senha.php">Perdeu a senha?</a>
+            <a class="kkk" href="recuperar_senha.php">Perdeu a senha?</a>
           </div>
         </div>
         <div class="box-register">

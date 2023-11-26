@@ -24,7 +24,7 @@ session_start();
     <header>
       <!-- USER-ICON -->
       <nav>
-        <a class="user" href="login.php"><i class="fa-solid fa-user"></i></a>
+        <a class="user" href="../login.php"><i class="fa-solid fa-user"></i></a>
         <!-- LOGO -->
         <a class="logo" href="index.html"
           ><img src="../fotos/img/logo.png" alt=""
@@ -76,7 +76,7 @@ session_start();
     </form>
 
     <div class="perdeu-senha">
-            <a class="kkk" href="login.php">Já possui uma conta?</a>
+            <a class="kkk" href="../login.php">Já possui uma conta?</a>
           </div>
         </div>
       </div>

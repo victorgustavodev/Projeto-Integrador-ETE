@@ -1,52 +1,72 @@
 <?php
 session_start();
 ob_start();
-include_once 'conexao.php';
+include_once 'php/conexao.php';
 $dados = filter_input_array(INPUT_POST,FILTER_DEFAULT);
 //Import PHPMailer classes into the global namespace
 //These must be at the top of your script, not inside a function
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
-require '../vendor/autoload.php';
+require 'vendor/autoload.php';
 $mail = new PHPMailer(true);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="fotos/Rose.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style/header.css" id="theme-stylesheet" />
+    <link rel="stylesheet" href="style/footer.css" id="theme-stylesheet" />
+    <link rel="stylesheet" href="style/responsivo.css" />
+    <link rel="stylesheet" href="style/register.css" />
+    <link rel="stylesheet" href="style/tema.css">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="fotos/Rose.ico" type="image/x-icon">
-  <link rel="stylesheet" href="style/main.css" id="theme-stylesheet">
-  <link rel="stylesheet" href="style/responsivo.css">
-  <link rel="stylesheet" href="https://fontawesome.com/icons/cart-shopping?f=sharp&s=regular&pc=%23000000" integrity="sha384-GLhlTQ8iK+1iS1+IjRwoTXcE5aZRIUdS/8r+T5uViIcZKh" crossorigin="anonymous">
+    <script
+      src="https://kit.fontawesome.com/c8e307d42e.js"
+      crossorigin="anonymous"
+    ></script>
 
-
-  <title>Floricultura Teresinha</title>
-</head>
-
-<body>
-  <!-- NAVEGAÇÃO LOGO + LINKS -->
+    <title>Floricultura Teresinha</title>
+  </head>
+  <body>
+    <!-- NAVEGAÇÃO LOGO + LINKS -->
     <header>
-        <nav>
-          <!-- MENU MOBILE -->
-            <a class="logo" href="index.html"><img src="fotos/img/logo.png" alt=""></a>
-            <div class="mobile-menu">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-            <!-- LINKS  -->
-            <ul class="nav-list">
-                <li><a href="#Catalogo">Catálogo</a></li>
-                <li><a href="#">Sobre nós</a></li>
-                <li><a href="#Contato">Contato</a></li>
-                <li><a href="sair.php">Sair</a></li>
-            </ul>
-        </nav>
-      </header>
+      <!-- USER-ICON -->
+      <nav>
+        <a class="user" href="login.html"><i class="fa-solid fa-user"></i></a>
+        <!-- LOGO -->
+        <a class="logo" href="index.html"
+          ><img src="fotos/img/logo.png" alt=""
+        /></a>
+        <!-- TEMA -->
+        <label for="theme-toggle" class="theme">
+          <span class="theme__toggle-wrap">
+            <input id="theme-toggle" class="theme__toggle" type="checkbox" role="switch" name="theme" value="dark">
+            <span class="theme__fill"></span>
+            <span class="theme__icon">
+              <span class="theme__icon-part"></span>
+              <span class="theme__icon-part"></span>
+              <span class="theme__icon-part"></span>
+              <span class="theme__icon-part"></span>
+              <span class="theme__icon-part"></span>
+              <span class="theme__icon-part"></span>
+              <span class="theme__icon-part"></span>
+              <span class="theme__icon-part"></span>
+              <span class="theme__icon-part"></span>
+            </span>
+          </span>
+        </label>
+      </nav>
+    </header>
+    <div class="wrapper">
+      <div class="container">
+        <div class="box-login">
+          <div class="login">
+            <h1>esqueceu a senha?</h1>
+          </div>
+          <div class="login">
 <?php 
   if(!empty($dados['SendRecupSenha'])){
         
@@ -103,7 +123,7 @@ $mail = new PHPMailer(true);
                   $mail->send();
 
                   $_SESSION['msg'] = "<p style='font-size: 15px; color: green;'>Enviado e-mail com instruções para recuperar a senha. Acesse a sua caixa de e-mail para recuperar a senha!</p>";
-                  header("Location: ../login.php");
+                  header("Location: login.php");
                 }
               catch (Exception $e) {
                 echo "Erro: E-mail não enviado com sucesso. Mailer Error: {$mail->ErrorInfo}";
@@ -132,42 +152,43 @@ $mail = new PHPMailer(true);
         if(isset($dados['usuario']))
         $usuario = $dados['usuario'];
         ?>
+            <p>
+             Insira o Email da conta<span style="color: red; font-size: 10px; margin: 3px"
+                >*</span
+              >
+            </p>
+        <input type="email" name="email" id="" required value="<?php echo $usuario; ?>">
+        </div>
 
-        <input type="email" name="email" placeholder="EMAIL" value="<?php echo $usuario; ?>">
+        <p style="color: rgb(255, 0, 0);">Você receberá um link em seu email para realizar a atualização da senha!</p>
 
-        <a href=""><button value="Recuperar" name="SendRecupSenha"><p>ENVIAR</p></button></a>
-        <p class="op">Lembrou a senha? <a href="index.php">Clique aqui para logar</a></p>  
-    </form>
-  </div>
-  <footer id="Contato">
-  <div class="adress">
-        <div class="contatos">
-          <div><hr style="width: 80vw; margin-bottom: 2vw;"></div>
-          <a href="https://www.instagram.com/floriculturatere/?igshid=YmMyMTA2M2Y%3D" target="_blank"><img src="fotos/insta-ico.png" style="width: 30px;" alt="Fale Conosco pelo Instagram" title="Fale Conosco pelo Instagram"></a>
-          
-          <a href="https://wa.me/5581998636465?text= Olá, Dona Terezinha! Tudo bem?" target="_blank"> 
-          <img id = "logo-wpp" style="width: 30px;" src="fotos/wpp-ico.png" alt="Fale Conosco pelo Whatsapp" title="Fale Conosco pelo Whatsapp">
+        <button value="Recuperar" name="SendRecupSenha" class="button-login">ENVIAR</button>
+        <a class="kkk" href="php/registro.php">Não possui conta?</a>
+          </div>
+        </div>
       </div>
-  
-      <address>Av. Alfredo Bandeira de Melo, 1 - Ana de Albuquerque, Igarassu - PE, 53630-030</address>
-  
-  </div>
-  
-</footer>
-
-<!-- WHATSAPP FLUTUANTE -->
-<div class="whats">
-       <a href="https://wa.me/5581998636465?text= Olá, Dona Terezinha! Tudo bem?" target="_blank"> 
- <img id = "logo-wpp-flutuante" src="fotos/wpp-ico.png" alt="Fale Conosco pelo Whatsapp" title="Fale Conosco pelo Whatsapp">
-      </a>
-</div> 
-
-
-<!-- DECLARAÇÃO DE SCRIPTS -->
-<script src="js/carrossel.js"></script>
-<script src="js/mobile-navbar.js"></script>
-<script src="js/tema.js"></script>
-
-</body>
+    </div>
+        <!-- WHATSAPP FLUTUANTE -->
+        <div class="whats">
+            <a
+              href="https://wa.me/5581998636465?text= Olá, Dona Terezinha! Tudo bem?"
+              target="_blank"
+              style="background: transparent"
+              ><i
+                class="fa-brands fa-whatsapp"
+                style="
+                  color: #ffffff;
+                  background-color: transparent;
+                  width: 50px;
+                  font-size: 30px;
+                "
+              ></i>
+            </a>
+          </div>
+  </body>
+    <!-- SCRIPTS -->
+    <script src="js/carrossel.js"></script>
+    <script src="js/cart.js"></script>
+  <script src="js/tema.js"></script>
 
 </html>
