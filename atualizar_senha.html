@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="style/footer.css" id="theme-stylesheet" />
     <link rel="stylesheet" href="style/responsivo.css" />
     <link rel="stylesheet" href="style/atualizar_senha.css" />
+    <link rel="stylesheet" href="style/tema.css" />
+
     <script
       src="https://kit.fontawesome.com/c8e307d42e.js"
       crossorigin="anonymous"
@@ -25,13 +27,31 @@
         <a class="logo" href="index.html"
           ><img src="fotos/img/logo.png" alt=""
         /></a>
-        <!-- CARRINHO -->
-        <div>
-          <a class="shopping">
-            <i class="fa-solid fa-bag-shopping"></i>
-            <span class="quantity">0</span></a
-          >
-        </div>
+        <!-- TEMA -->
+        <label for="theme-toggle" class="theme">
+          <span class="theme__toggle-wrap">
+            <input
+              id="theme-toggle"
+              class="theme__toggle"
+              type="checkbox"
+              role="switch"
+              name="theme"
+              value="dark"
+            />
+            <span class="theme__fill"></span>
+            <span class="theme__icon">
+              <span class="theme__icon-part"></span>
+              <span class="theme__icon-part"></span>
+              <span class="theme__icon-part"></span>
+              <span class="theme__icon-part"></span>
+              <span class="theme__icon-part"></span>
+              <span class="theme__icon-part"></span>
+              <span class="theme__icon-part"></span>
+              <span class="theme__icon-part"></span>
+              <span class="theme__icon-part"></span>
+            </span>
+          </span>
+        </label>
       </nav>
     </header>
     <div class="wrapper">
@@ -42,7 +62,8 @@
           </div>
           <div class="login">
             <p>
-             Insira sua nova senha<span style="color: red; font-size: 10px; margin: 3px"
+              Insira sua nova senha<span
+                style="color: red; font-size: 10px; margin: 3px"
                 >*</span
               >
             </p>
@@ -55,25 +76,26 @@
         </div>
       </div>
     </div>
-        <!-- WHATSAPP FLUTUANTE -->
-        <div class="whats">
-          <a
-            href="https://wa.me/5581998636465?text= Olá, Dona Terezinha! Tudo bem?"
-            target="_blank"
-            style="background: transparent"
-            ><i
-              class="fa-brands fa-whatsapp"
-              style="
-                color: #ffffff;
-                background-color: transparent;
-                width: 50px;
-                font-size: 30px;
-              "
-            ></i>
-          </a>
-        </div>
+    <!-- WHATSAPP FLUTUANTE -->
+    <div class="whats">
+      <a
+        href="https://wa.me/5581998636465?text= Olá, Dona Terezinha! Tudo bem?"
+        target="_blank"
+        style="background: transparent"
+        ><i
+          class="fa-brands fa-whatsapp"
+          style="
+            color: #ffffff;
+            background-color: transparent;
+            width: 50px;
+            font-size: 30px;
+          "
+        ></i>
+      </a>
+    </div>
   </body>
-    <!-- SCRIPTS -->
-    <script src="js/carrossel.js"></script>
-    <script src="js/cart.js"></script>
+  <!-- SCRIPTS -->
+  <script src="js/carrossel.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/tema.js"></script>
 </html>
