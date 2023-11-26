@@ -9,12 +9,6 @@
   box-sizing: border-box;
 }
 
-.logo img {
-  padding-top: 20px;
-  width: 40vw;
-  transition: all 0.8s ease;
-}
-
 /* BODY */
 
 body {
