@@ -16,6 +16,14 @@ FILTER_DEFAULT);
     <link rel="stylesheet" href="style/footer.css" id="theme-stylesheet" />
     <link rel="stylesheet" href="style/responsivo.css" />
     <link rel="stylesheet" href="style/login.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+
     <script
       src="https://kit.fontawesome.com/c8e307d42e.js"
       crossorigin="anonymous"
@@ -28,27 +36,22 @@ FILTER_DEFAULT);
     <header>
       <!-- USER-ICON -->
       <nav>
-        <a class="user" href="login.php"><i class="fa-solid fa-user"></i></a>
         <!-- LOGO -->
         <a class="logo" href="index.html"
           ><img src="fotos/img/logo.png" alt=""
         /></a>
-        <!-- CARRINHO -->
-        <div>
-          <a class="shopping">
-            <i class="fa-solid fa-bag-shopping"></i>
-            <span class="quantity">0</span></a
-          >
-        </div>
+        <div id="login-icon"><i class="fa-solid fa-user"></i></a>
+          <p>Faça seu <a href="login.php" style="color:#f37f75 ; font-weight: bold; text-decoration: none;">LOGIN</a> ou <a href="registro.php"style=" color:#f37f75 ; font-weight: bold; text-decoration: none;">CADASTRE-SE</a></p></div>
       </nav>
     </header>
+
     <div class="wrapper">
       <div class="container">
         <div class="box-login">
           <div class="login">
+            <h1>Entrar</h1>
 
-     <form method="post" action="">
-      <h1>Entrar</h1>
+              <form method="post" action="">
               <p>
                 E-mail<span style="color: red; font-size: 10px; margin: 3px"
                   >*</span
@@ -100,7 +103,7 @@ FILTER_DEFAULT);
         ?>
 
             <button value="Acessar" name="SendLogin" class="button-login">ACESSAR</button>
-    </form>
+          </form>
           <div class="perdeu-senha">
             <label for="">
               <input type="checkbox" />
@@ -115,7 +118,7 @@ FILTER_DEFAULT);
             O registro neste site permite que você acesse o status e o histórico do seu pedido. Basta preencher os campos abaixo e configuraremos uma nova conta para você rapidamente. Solicitaremos apenas as informações necessárias para tornar o processo de compra mais rápido e fácil.
           </p>
           <a href="registro.php"><button class="button-cadastro">CADASTRE-SE</button></a>
-        </div>
+          </div>
       </div>
     </div>
         <!-- WHATSAPP FLUTUANTE -->
@@ -139,5 +142,6 @@ FILTER_DEFAULT);
     <!-- SCRIPTS -->
     <script src="js/carrossel.js"></script>
     <script src="js/cart.js"></script>
-</html>
+  <script src="js/tema.js"></script>
 
+</html>

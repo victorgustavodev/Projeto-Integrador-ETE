@@ -21,7 +21,13 @@ $mail = new PHPMailer(true);
     <link rel="stylesheet" href="style/footer.css" id="theme-stylesheet" />
     <link rel="stylesheet" href="style/responsivo.css" />
     <link rel="stylesheet" href="style/register.css" />
-    <link rel="stylesheet" href="style/tema.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
 
     <script
       src="https://kit.fontawesome.com/c8e307d42e.js"
@@ -35,31 +41,15 @@ $mail = new PHPMailer(true);
     <header>
       <!-- USER-ICON -->
       <nav>
-        <a class="user" href="login.php"><i class="fa-solid fa-user"></i></a>
         <!-- LOGO -->
         <a class="logo" href="index.html"
           ><img src="fotos/img/logo.png" alt=""
         /></a>
-        <!-- TEMA -->
-        <label for="theme-toggle" class="theme">
-          <span class="theme__toggle-wrap">
-            <input id="theme-toggle" class="theme__toggle" type="checkbox" role="switch" name="theme" value="dark">
-            <span class="theme__fill"></span>
-            <span class="theme__icon">
-              <span class="theme__icon-part"></span>
-              <span class="theme__icon-part"></span>
-              <span class="theme__icon-part"></span>
-              <span class="theme__icon-part"></span>
-              <span class="theme__icon-part"></span>
-              <span class="theme__icon-part"></span>
-              <span class="theme__icon-part"></span>
-              <span class="theme__icon-part"></span>
-              <span class="theme__icon-part"></span>
-            </span>
-          </span>
-        </label>
+        <div id="login-icon"><i class="fa-solid fa-user"></i></a>
+          <p>Faça seu <a href="login.php" style="color:#f37f75 ; font-weight: bold; text-decoration: none;">LOGIN</a> ou <a href="registro.php"style=" color:#f37f75 ; font-weight: bold; text-decoration: none;">CADASTRE-SE</a></p></div>
       </nav>
     </header>
+
     <div class="wrapper">
       <div class="container">
         <div class="box-login">
@@ -130,12 +120,12 @@ $mail = new PHPMailer(true);
               }
             }
             else{
-              echo "<p style='font-size: 25px; color: #ff0001'>Tente novamente!</p>";
+              echo "<p style='font-size: 15px; color: #ff0001'>Tente novamente!</p>";
             }
           
           }
           else{
-            echo "<p style='font-size: 25px; color: #ff0001'>Erro: E-mail não cadastrado!</p>";
+            echo "<p style='font-size: 15px; color: #ff0001'>Erro: E-mail não cadastrado!</p>";
           }
       }
 
@@ -163,13 +153,13 @@ $mail = new PHPMailer(true);
         <p style="color: rgb(255, 0, 0);">Você receberá um link em seu email para realizar a atualização da senha!</p>
 
         <button value="Recuperar" name="SendRecupSenha" class="button-login">ENVIAR</button>
-        <a class="kkk" href="php/registro.php">Não possui conta?</a>
+        <a class="kkk" href="registro.php">Não possui conta?</a>
           </div>
         </div>
       </div>
     </div>
-        <!-- WHATSAPP FLUTUANTE -->
-        <div class="whats">
+       <!-- WHATSAPP FLUTUANTE -->
+       <div class="whats">
             <a
               href="https://wa.me/5581998636465?text= Olá, Dona Terezinha! Tudo bem?"
               target="_blank"

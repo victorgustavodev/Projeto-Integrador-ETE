@@ -4,26 +4,9 @@
   margin: 0;
   padding: 0;
   border: 5px;
-  font-family: Poppins;
+  font-family: 'Poppins', sans-serif;
   background-color: transparent;
   box-sizing: border-box;
-}
-
-/* Importando Fontes */
-@font-face {
-  font-family: Benguia;
-  src: url(assets/fonte/BenguiatStd-Book.otf);
-}
-
-@font-face {
-  font-family: Poppins;
-  src: url(/fonte/Poppins-Regular.ttf);
-}
-
-.logo img {
-  padding-top: 20px;
-  width: 40vw;
-  transition: all 0.8s ease;
 }
 
 /* BODY */
@@ -72,12 +55,29 @@ body {
   border-radius: 2vw;
   width: 1000px;
   height: 500px;
-  transition: box-shadow 1s ease-in-out;
+  animation: sliderimg 1s linear;
 }
 
-.carrosel-cainter image-hovered {
-  box-shadow: 0 0 10px rgba(255, 3, 3, 0.925);
+@keyframes sliderimg {
+  0% {
+    filter: blur(2px);
+  }
+  20% {
+    filter: blur(1.2px);
+  }
+  70% {
+    filter: blur(0.7px);
+  }
+  100% {
+    filter: blur(0px);
+  }
 }
+
+/* 
+.carrosel-slide img {
+  transition: opacity 1s linear;
+  opacity: 0.5;
+} */
 
 /* CATALOGO */
 
@@ -94,6 +94,7 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0 -7px;
+  margin-bottom: 70px;
 }
 
 .listagem-produtos .box-produto {
@@ -159,6 +160,9 @@ a:-webkit-any-link {
 
 button {
   cursor: pointer;
+  background: gray;
+  padding: 12px 25px;
+  border-radius: 30px;
 }
 
 /* BOTÃO DE COMPRAR */
@@ -183,6 +187,8 @@ button {
 
 .btn-color {
   background-color: transparent;
+  text-decoration: none;
+
 }
 
 /* --------login-------- */

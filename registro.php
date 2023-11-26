@@ -12,6 +12,13 @@ session_start();
     <link rel="stylesheet" href="style/footer.css" id="theme-stylesheet" />
     <link rel="stylesheet" href="style/responsivo.css" />
     <link rel="stylesheet" href="style/register.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+
     <script
       src="https://kit.fontawesome.com/c8e307d42e.js"
       crossorigin="anonymous"
@@ -24,24 +31,20 @@ session_start();
     <header>
       <!-- USER-ICON -->
       <nav>
-        <a class="user" href="login.php"><i class="fa-solid fa-user"></i></a>
         <!-- LOGO -->
         <a class="logo" href="index.html"
           ><img src="fotos/img/logo.png" alt=""
         /></a>
-        <!-- CARRINHO -->
-        <div>
-          <a class="shopping">
-            <i class="fa-solid fa-bag-shopping"></i>
-            <span class="quantity">0</span></a
-          >
-        </div>
+        <div id="login-icon"><i class="fa-solid fa-user"></i></a>
+          <p>Faça seu <a href="login.php" style="color:#f37f75 ; font-weight: bold; text-decoration: none;">LOGIN</a> ou <a href="registro.php "style=" color:#f37f75 ; font-weight: bold; text-decoration: none;">CADASTRE-SE</a></p></div>
       </nav>
     </header>
+
     <div class="wrapper">
       <div class="container">
         <div class="box-login">
           <div class="login">
+            <h1>Registre-se</h1>
     <?php 
     if(isset($_SESSION['msg']))
     echo $_SESSION['msg'];
@@ -81,8 +84,27 @@ session_start();
         </div>
       </div>
     </div>
+        <!-- WHATSAPP FLUTUANTE -->
+        <div class="whats">
+          <a
+            href="https://wa.me/5581998636465?text= Olá, Dona Terezinha! Tudo bem?"
+            target="_blank"
+            style="background: transparent"
+            ><i
+              class="fa-brands fa-whatsapp"
+              style="
+                color: #ffffff;
+                background-color: transparent;
+                width: 50px;
+                font-size: 30px;
+              "
+            ></i>
+          </a>
+        </div>
   </body>
     <!-- SCRIPTS -->
     <script src="js/carrossel.js"></script>
     <script src="js/cart.js"></script>
+  <script src="js/tema.js"></script>
+
 </html>
