@@ -1,5 +1,5 @@
 <?php
-session_start();
+// session_start();
 include_once("conexao.php");
 
 $nome = filter_input(INPUT_POST, 'nome');
@@ -11,7 +11,7 @@ $resultado_usuario  = $conn->prepare($query_usuario);
 $resultado_usuario-> execute();
 
 if(($resultado_usuario) AND ($resultado_usuario->rowCount() != 0)){
-    header("Location: ../login.php");
+    header("Location: login.php");
     $_SESSION['msg'] = "<p style='font-size: 15px; color: green; line-height: 20px'>Cadastro realizado! Preencha seus dados e realize o login para que você acesse o status e o histórico do seu pedido. </p>";
 } else{
     header("Location: registro.php");

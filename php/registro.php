@@ -1,5 +1,5 @@
 <?php 
-session_start();
+// session_start();
 ?>
 
 <!DOCTYPE html>
@@ -7,11 +7,11 @@ session_start();
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="../fotos/Rose.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="../style/header.css" id="theme-stylesheet" />
-    <link rel="stylesheet" href="../style/footer.css" id="theme-stylesheet" />
-    <link rel="stylesheet" href="../style/responsivo.css" />
-    <link rel="stylesheet" href="../style/register.css" />
+    <link rel="shortcut icon" href="fotos/Rose.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style/header.css" id="theme-stylesheet" />
+    <link rel="stylesheet" href="style/footer.css" id="theme-stylesheet" />
+    <link rel="stylesheet" href="style/responsivo.css" />
+    <link rel="stylesheet" href="style/register.css" />
     <script
       src="https://kit.fontawesome.com/c8e307d42e.js"
       crossorigin="anonymous"
@@ -24,10 +24,10 @@ session_start();
     <header>
       <!-- USER-ICON -->
       <nav>
-        <a class="user" href="../login.php"><i class="fa-solid fa-user"></i></a>
+        <a class="user" href="login.php"><i class="fa-solid fa-user"></i></a>
         <!-- LOGO -->
         <a class="logo" href="index.html"
-          ><img src="../fotos/img/logo.png" alt=""
+          ><img src="fotos/img/logo.png" alt=""
         /></a>
         <!-- CARRINHO -->
         <div>
@@ -76,7 +76,7 @@ session_start();
     </form>
 
     <div class="perdeu-senha">
-            <a class="kkk" href="../login.php">Já possui uma conta?</a>
+            <a class="kkk" href="login.php">Já possui uma conta?</a>
           </div>
         </div>
       </div>

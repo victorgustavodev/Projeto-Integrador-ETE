@@ -1,0 +1,17 @@
+[
+{"type":"header","version":"5.2.0","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"floricultura"},
+{"type":"table","name":"usuarios","database":"floricultura","data":
+[
+{"id":"47","nome":"Williane","email":"williane010201@gmail.com","senha_usuario":"$2y$10$102JOiKCNPDic9bHwrWSpe0WIJ0jMNS.0fPnBBRCnpiYMCSP7Kxq6","recuperar_senha":"NULL","created":"2023-11-26"},
+{"id":"46","nome":"williane","email":"williane010201@gmail.com","senha_usuario":"$2y$10$rZSTFWxu73ZCGDcK8IR92O1aM4acrrqq7mmWSp6.ygsKDiMKVY0n2","recuperar_senha":"NULL","created":"2023-11-25"},
+{"id":"45","nome":"williane","email":"williane010201@gmail.com","senha_usuario":"$2y$10$VMHo0QO.UAuW8KROPlC8uO5ZJodPFghYRz9t\/BsTQrPNJvQhYtBdG","recuperar_senha":null,"created":"2023-11-25"},
+{"id":"44","nome":"williane","email":"williane010201@gmail.com","senha_usuario":"$2y$10$mf89vivpBA54PyGNTUwjJuGrSisTZic8PVoYYGvxY4Mp\/YkqoOdUe","recuperar_senha":"$2y$10$AaLcoWSiv9X5JsybIroQm.dWwtWvUiG11XuLMVqRRjBcg.2oH8zd6","created":"2023-11-25"},
+{"id":"43","nome":"williane","email":"williane@gmail.com","senha_usuario":"$2y$10$F9XrBvur9pzMFm65gBzFNumAPi5j10sksfYdvfitxjFWUhYO6QfLq","recuperar_senha":null,"created":"2023-11-25"},
+{"id":"42","nome":"williane","email":"williane@gmail.com","senha_usuario":"$2y$10$.cbrtjuCbq3Ayze5X08KWujbseX9turB8m8q4doOqydTrTvSQ7mIu","recuperar_senha":null,"created":"2023-11-25"},
+{"id":"40","nome":"williane","email":"williane@gmail.com","senha_usuario":"$2y$10$UnOKQq1ZwhKUNUm7KtLRPeszMtulSrXl2sNkdu6dgdPochWb.3BbS","recuperar_senha":null,"created":"2023-11-25"},
+{"id":"41","nome":"williane","email":"williane@gmail.com","senha_usuario":"$2y$10$y\/bDz1CX\/uq3979tJ5wvbOq03E3I5Z0xLLu626VbslR2aLKrgzaRG","recuperar_senha":null,"created":"2023-11-25"},
+{"id":"39","nome":"williane","email":"williane@gmail.com","senha_usuario":"$2y$10$dEZoLHyhcIaRRoZJNh8yiuZ7vNXWriK9jo6SudbT1Iauma.D01cPu","recuperar_senha":null,"created":"2023-11-25"}
+]
+}
+]

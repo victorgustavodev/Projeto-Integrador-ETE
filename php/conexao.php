@@ -1,9 +1,9 @@
 <?php
 
 $host = "localhost";
-$user = "root";
-$pass = "";
-$dbname = "floricultura";
+$user = "id21576777_floricultura";
+$pass = "Etejbl.2023";
+$dbname = "id21576777_usuarios";
 $port = 3306;
  
 try{

@@ -1,5 +1,5 @@
 <?php
-session_start();
+// session_start();
 ob_start();
 include_once 'php/conexao.php';
 $dados = filter_input_array(INPUT_POST,FILTER_DEFAULT);
@@ -35,7 +35,7 @@ $mail = new PHPMailer(true);
     <header>
       <!-- USER-ICON -->
       <nav>
-        <a class="user" href="login.html"><i class="fa-solid fa-user"></i></a>
+        <a class="user" href="login.php"><i class="fa-solid fa-user"></i></a>
         <!-- LOGO -->
         <a class="logo" href="index.html"
           ><img src="fotos/img/logo.png" alt=""

@@ -1,7 +1,7 @@
 <?php
-session_start();
+// session_start();
 ob_start();
-include_once 'php/conexao.php';
+include_once 'conexao.php';
 $dados = filter_input_array(INPUT_POST, 
 FILTER_DEFAULT);
 ?>
@@ -82,7 +82,7 @@ FILTER_DEFAULT);
                 if (password_verify($dados['senha_usuario'], $row_email['senha_usuario'])) {
                     $_SESSION['id'] = $row_email['id'];
                     $_SESSION['nome'] = $row_email['nome'];
-                    header("Location: php/session.php");
+                    header("Location: session.php");
                     exit();
                 } else {
                     $_SESSION['msg'] = "<p style='font-size: 25px; color: #ff0001'>Erro: Usuário ou senha inválida!</p>";
@@ -114,7 +114,7 @@ FILTER_DEFAULT);
           <p>
             O registro neste site permite que você acesse o status e o histórico do seu pedido. Basta preencher os campos abaixo e configuraremos uma nova conta para você rapidamente. Solicitaremos apenas as informações necessárias para tornar o processo de compra mais rápido e fácil.
           </p>
-          <a href="php/registro.php"><button class="button-cadastro">CADASTRE-SE</button></a>
+          <a href="registro.php"><button class="button-cadastro">CADASTRE-SE</button></a>
         </div>
       </div>
     </div>
