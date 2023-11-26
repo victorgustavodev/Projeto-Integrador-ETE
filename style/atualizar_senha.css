@@ -1,122 +1,125 @@
 /* Importando Fontes */
 @font-face {
-    font-family: Benguia;
-    src: url(assets/fonte/BenguiatStd-Book.otf);
-  }
-  
-  @font-face {
-    font-family: Poppins;
-    src: url(/fonte/Poppins-Regular.ttf);
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    border: 5px;
-    font-family: Poppins;
-    box-sizing: border-box;
-  }
-  
-  body {
-    background-size: cover;
-    overflow-x: hidden;
-    background-image: url("https://wallpapercave.com/wp/dNXUSSF.jpg");
-    margin: 0;
-    padding: 0;
-    font-family: poppins, sans-serif;
-    font-size: 12px;
-    color: var(--primary-color);
-    line-height: 1.2em;
-    background-color: #ffffff;
-  }
-  
-  .wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .container {
-    display: flex;
-  }
-  
-  /* LOGIN */
-  
-  .box-login {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    border: 1px solid #000000;
-    padding: 100px 70px;
-    border-radius: 20px;
-    background-color: rgba(0, 0, 0, 0.075);
-  }
-  
-  .box-login h1 {
-    margin-bottom: 30px;
-    text-transform: uppercase;
-    display: flex;
-    justify-content: center;
-    font-weight: bold;
-  }
-  
-  .box-register {
-    padding-left: 2%;
-    padding-right: 20%;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .login input {
-    border: solid 0.5px rgb(199, 199, 199);
-    border-radius: 10px;
-    width: 500px;
-    padding: 5px;
-    margin-top: 10px;
-  
-  }
-  
-  .senha input {
-    border: solid 0.5px rgb(199, 199, 199);
-    border-radius: 10px;
-    width: 500px;
-    padding: 5px;
-    margin-top: 10px;
-  
-  }
-  
-  .button-login {
-    background-color: #f37f75;
-    border-radius: 30px;
-    color: white;
-    font-weight: 700;
-    cursor: pointer;
-    padding: 15px;
-  }
-  
-  .button-login:hover {
-    background-color: #fcaca4;
-  }
-  
-  .wrapper p {
-    font-size: 15px;
-    font-weight: bold;
-  }
-  
-  .kkk {
-    text-decoration: none;
-    color: #f37f75;
-    display: flex;
-    justify-content: flex-end;
-  }
-  
-  .kkk:hover {
-    text-decoration: dotted;
-  }
-  
-  .perdeu-senha
-  {
-    font-size: 15px;
-    font-weight: bold;
-  }
+  font-family: Benguia;
+  src: url(assets/fonte/BenguiatStd-Book.otf);
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url(/fonte/Poppins-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 5px;
+  font-family: Poppins;
+  box-sizing: border-box;
+}
+
+body {
+  background-size: cover;
+  overflow-x: hidden;
+  background-image: url("https://wallpapercave.com/wp/dNXUSSF.jpg");
+  margin: 0;
+  padding: 0;
+  font-family: poppins, sans-serif;
+  font-size: 12px;
+  color: var(--primary-color);
+  line-height: 1.2em;
+  background-color: #ffffff;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+}
+
+/* LOGIN */
+
+.box-login {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 1px solid #000000;
+  padding: 100px 70px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.075);
+}
+
+.box-login h1 {
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.box-register {
+  padding-left: 2%;
+  padding-right: 20%;
+  align-items: center;
+  text-align: center;
+}
+
+.login input {
+  border: solid 0.5px rgb(199, 199, 199);
+  border-radius: 10px;
+  width: 500px;
+  padding: 8px;
+  margin-top: 10px;
+  background-color: rgb(172, 165, 165);
+  color: black;
+  font-weight: 700;
+}
+
+.senha input {
+  border: solid 0.5px rgb(199, 199, 199);
+  border-radius: 10px;
+  width: 500px;
+  padding: 8px;
+  margin-top: 10px;
+  background-color: rgb(172, 165, 165);
+  color: black;
+  font-weight: 700;
+}
+
+.button-login {
+  background-color: #f37f75;
+  border-radius: 30px;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 15px;
+}
+
+.button-login:hover {
+  background-color: #fcaca4;
+}
+
+.wrapper p {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.kkk {
+  text-decoration: none;
+  color: #f37f75;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.kkk:hover {
+  text-decoration: dotted;
+}
+
+.perdeu-senha {
+  font-size: 15px;
+  font-weight: bold;
+}

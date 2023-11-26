@@ -72,16 +72,22 @@ body {
   border: solid 0.5px rgb(199, 199, 199);
   border-radius: 10px;
   width: 500px;
-  padding: 5px;
+  padding: 8px;
   margin-top: 10px;
+  background-color: rgb(172, 165, 165);
+  color: black;
+  font-weight: 700;
 }
 
 .senha input {
   border: solid 0.5px rgb(199, 199, 199);
   border-radius: 10px;
   width: 500px;
-  padding: 5px;
+  padding: 8px;
   margin-top: 10px;
+  background-color: rgb(172, 165, 165);
+  color: black;
+  font-weight: 700;
 }
 
 .button-login {
@@ -126,8 +132,11 @@ body {
 .box-register {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   gap: 30px;
+  letter-spacing: 3px;
+  font-weight: 400;
+  line-height: 17px;
 }
 
 /* ---------REGISTRE-SE---------- */

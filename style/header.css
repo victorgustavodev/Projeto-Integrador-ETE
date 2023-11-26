@@ -11,9 +11,11 @@
 }
 
 .logo img {
-  margin-top: -15px;
-  width: 25vw;
+
+  margin-top: 10px;
+  width: 30vw;
 }
+
 
 /* Menu de navegação */
 nav {
@@ -59,3 +61,4 @@ nav a:hover {
 #login-icon p{
   font-size: 15px;
 }
+

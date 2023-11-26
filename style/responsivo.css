@@ -1,7 +1,6 @@
 /* MEDIA  */
 
 @media screen and (max-width: 1700px) {
-  
   .listagem-produtos .box-produto {
     width: 200px;
     padding: 5px;
@@ -24,11 +23,13 @@
   }
 
   .logo img {
-    margin-bottom: 5%;
-    width: 40vw;
-    transition: all 0.8s ease;
+    width: 35vw;
   }
 
+  #prevButton,
+  #nextButton {
+    padding-top: 100px;
+  }
   .carrossel-container img {
     margin-top: 15vw;
     border-radius: 2vw;
@@ -47,18 +48,46 @@
   }
 }
 /* MEDIA  */
-@media screen and (min-width: 768px) and (max-width: 991px) {
+@media screen and (max-width: 991px) {
   .logo img {
-    margin-bottom: 5%;
-    width: 50vw;
-    transition: all 0.8s ease;
+    width: 40vw;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
   }
 
+
+  .box-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0% !important;
+    padding-right: 0% !important;
+    justify-content: center;
+    gap: 15px;
+    border-bottom: 3px solid #808080;
+    /* background-color: red; */
+}
+
+.box-register {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px 0px;
+  gap: 30px;
+}
   .carrossel-container img {
     margin-top: 15vw;
     border-radius: 2vw;
     width: 500px;
     height: 300px;
+  }
+
+  #prevButton,
+  #nextButton {
+    padding-top: 100px;
   }
 
   .listagem-produtos .box-produto {
@@ -73,20 +102,52 @@
 
 /* MEDIA  */
 @media screen and (max-width: 767px) {
-  .user i {
-    margin: 10px;
-    font-size: 22px;
-    color: #f37f75;
-    cursor: pointer;
+  .logo img {
+    width: 30vw;
+    padding-bottom: 15px;
   }
 
-  .shopping i {
-    font-size: 25px;
+  
+  .box-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0% !important;
+    padding-right: 0% !important;
+    gap: 15px;
+    border-bottom: 3px solid rgb(0, 0, 0);
+    /* background-color: red; */
+}
+
+.box-register {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px 0px;
+  gap: 30px;
+}
+
+  #prevButton,
+  #nextButton {
+    display: none;
   }
-  .logo img {
-    margin-bottom: 10%;
-    width: 50vw;
-    transition: all 0.8s ease;
+
+  #login-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  #login-icon i {
+    color: #f37f75;
+    font-size: 15px;
+  }
+
+  #login-icon p {
+    font-size: 12px;
   }
 
   .carrossel-container img {
@@ -112,19 +173,32 @@
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
   .logo img {
-    margin-bottom: 5%;
-    padding-bottom: 20px;
-    width: 65vw;
-    transition: all 0.8s ease;
+    width: 30vw;
+    padding-bottom: 15px;
   }
-
+  #login-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+  }
   .carrossel-container img {
     margin-top: 15vw;
     border-radius: 2vw;
     width: 300px;
-    height: 150px;
+    height: 200px;
+  }
+
+  #login-icon i {
+    color: #f37f75;
+    font-size: 10px;
+    padding-bottom: 4px;
+  }
+
+  #login-icon p {
+    font-size: 10px;
   }
 
   #prevButton,
@@ -147,4 +221,3 @@
     cursor: pointer;
   }
 }
-
