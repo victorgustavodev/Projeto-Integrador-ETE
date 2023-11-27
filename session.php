@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 ob_start();
@@ -21,6 +22,7 @@ if((!isset($_SESSION['id'])) AND (!isset($_SESSION['nome']))){
     <link rel="stylesheet" href="style/footer.css" id="theme-stylesheet" />
     <link rel="stylesheet" href="style/responsivo.css" />
     <link rel="stylesheet" href="style/tema.css" />
+    <link rel="stylesheet" href="style/session.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -46,7 +48,12 @@ if((!isset($_SESSION['id'])) AND (!isset($_SESSION['nome']))){
         /></a>
         <div id="login-icon"><i class="fa-solid fa-user"></i></a>
           <p>Seja Bem-vindo(a), <a href="login.html" style="color:#f37f75 ; font-weight: bold; text-decoration: none;
-          "><?php echo $_SESSION['nome']; ?>!</a></p></div>
+          "><?php echo $_SESSION['nome']; ?>!</a></p>
+          <a href="sair.php"><button class="logout">
+    logout
+</button></a>
+          </div>
+          
       </nav>
     </header>
 

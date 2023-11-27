@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 ob_start();
@@ -88,10 +89,10 @@ FILTER_DEFAULT);
                     header("Location: session.php");
                     exit();
                 } else {
-                    $_SESSION['msg'] = "<p style='font-size: 25px; color: #ff0001'>Erro: Usuário ou senha inválida!</p>";
+                    $_SESSION['msg'] = "<p style='font-size: 14px; color: #ff0001; display:flex; justify-content: center;'> Usuário ou senha inválida!</p>";
                 }
             } else {
-                $_SESSION['msg'] = "<p style='font-size: 25px; color: #ff0000'>Erro: Usuário ou senha inválida!</p>";
+                $_SESSION['msg'] = "<p style='font-size: 14px; color: #ff0000; display:flex; justify-content: center;'> Usuário ou senha inválida!</p>";
             }
 
         }
